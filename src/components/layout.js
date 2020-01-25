@@ -1,7 +1,14 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import "./Layout.sass"
 
 const Layout = ({ children }) => {
+  const [isDarkMode, setDarkMode] = useState(true)
+
+  useEffect(() => {
+    document.body.className = isDarkMode ? "theme--dark" : "theme--light"
+  }, [isDarkMode])
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,6 +34,9 @@ const Layout = ({ children }) => {
           © {new Date().getFullYear()}
           {` `}
           <a href="https://www.ultimatemachine.se">Ultimate Machine</a>
+          <button onClick={() => setDarkMode(!isDarkMode)}>
+            {isDarkMode ? "Light" : "Dark"}
+          </button>
         </footer>
       </div>
     </>

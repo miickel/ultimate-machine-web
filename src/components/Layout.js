@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import "normalize.css"
 import "./Layout.sass"
 
 const Layout = ({ children }) => {
-  const [isDarkMode, setDarkMode] = useState(true)
+  const [isDarkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
     document.body.className = isDarkMode ? "theme--dark" : "theme--light"
@@ -22,11 +21,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <h1>{data.site.siteMetadata.title}</h1>
       <div
         style={{
           margin: `30px auto`,
-          maxWidth: 960,
+          maxWidth: 680,
           padding: `0 1.0875rem 1.45rem`,
         }}
       >

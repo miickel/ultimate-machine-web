@@ -73,6 +73,21 @@ module.exports = {
               destinationDir: "static",
             },
           },
+          "gatsby-remark-autolink-headers",
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              inlineCodeMarker: "+",
+            },
+          },
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+            },
+          },
         ],
       },
     },

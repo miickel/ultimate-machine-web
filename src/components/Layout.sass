@@ -1,12 +1,17 @@
 \:root
   --color1: #00244F
-  --colorFg: #fff
+  --colorFg: #DDE9F8
   --colorBg: var(--color1)
+  --colorAnchorFg: var(--colorFg)
+  --colorCodeBlock: #00152D
 
 .theme--light
   --colorFg: var(--color1)
   --colorBg: #fff
+  --colorAnchorFg: var(--colorFg)
+  --colorCodeBlock: var(--color1)
 
 body
   color: var(--colorFg)
   background: var(--colorBg)
+  transition: color, background-color 850ms ease-out

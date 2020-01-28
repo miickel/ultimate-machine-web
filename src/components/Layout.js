@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import "../utils/prism-theme.css"
 import "./Layout.sass"
 
 const Layout = ({ children }) => {

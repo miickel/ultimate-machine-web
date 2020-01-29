@@ -1,0 +1,27 @@
+.header
+  position: relative
+  padding: 4rem 0
+  margin-bottom: 3rem
+
+.line
+  position: absolute
+  top: 50%
+  left: 0
+  right: 0
+  transform: translatey(-50%)
+  height: 7px
+  background: var(--colorFg)
+  opacity: .03
+  z-index: -1
+
+.container
+  display: flex
+  align-items: center
+  justify-content: space-between
+  >a:first-child
+    line-height: 0
+    background: var(--colorBg)
+    padding: 0 1rem
+    transition: background-color 850ms ease-out
+    svg
+      width: 111px

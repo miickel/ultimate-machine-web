@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "../utils/prism-theme.css"
 import "./Layout.sass"
+import Header from "./Header.js"
+import Container from "./Container.js"
 
 const Layout = ({ children }) => {
   const [isDarkMode, setDarkMode] = useState(false)
@@ -22,23 +24,18 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div
-        style={{
-          margin: `30px auto`,
-          maxWidth: 680,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Header />
+      <Container>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}
-          {` `}
-          <a href="https://www.ultimatemachine.se">Ultimate Machine</a>
-          <button onClick={() => setDarkMode(!isDarkMode)}>
-            {isDarkMode ? "Light" : "Dark"}
-          </button>
-        </footer>
-      </div>
+      </Container>
+      <footer>
+        © {new Date().getFullYear()}
+        {` `}
+        <a href="https://www.ultimatemachine.se">Ultimate Machine</a>
+        <button onClick={() => setDarkMode(!isDarkMode)}>
+          {isDarkMode ? "Light" : "Dark"}
+        </button>
+      </footer>
     </>
   )
 }

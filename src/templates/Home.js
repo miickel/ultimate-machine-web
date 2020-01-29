@@ -3,12 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout.js"
 import BlogRoll from "../components/BlogRoll.js"
 
-export const HomeTemplate = ({ title }) => (
-  <div>
-    <h2>{title}</h2>
-    <BlogRoll />
-  </div>
-)
+export const HomeTemplate = ({ title }) => <BlogRoll />
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark

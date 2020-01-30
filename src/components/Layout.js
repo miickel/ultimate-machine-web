@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import "../utils/prism-theme.css"
 import "./Layout.sass"
 import Header from "./Header.js"
+import Footer from "./Footer.js"
 import Container from "./Container.js"
 
 const Layout = ({ children }) => {
@@ -28,14 +29,7 @@ const Layout = ({ children }) => {
       <Container>
         <main>{children}</main>
       </Container>
-      <footer>
-        © {new Date().getFullYear()}
-        {` `}
-        <a href="https://www.ultimatemachine.se">Ultimate Machine</a>
-        <button onClick={() => setDarkMode(!isDarkMode)}>
-          {isDarkMode ? "Light" : "Dark"}
-        </button>
-      </footer>
+      <Footer />
     </>
   )
 }

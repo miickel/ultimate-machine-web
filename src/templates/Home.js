@@ -8,7 +8,7 @@ export const HomeTemplate = ({ title }) => (
   <Layout>
     <div className={styles.hero}>
       <h1>
-        Hi! I'm Mickel - a consistent person doing whimsical things. Sort of
+        Hi! I’m Mickel - a consistent person doing whimsical things. Sort of
         like a toddler.
       </h1>
     </div>

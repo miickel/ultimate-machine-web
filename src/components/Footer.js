@@ -10,17 +10,17 @@ const Footer = () => {
         <ul>
           <li>
             <a href={`https://github.com/miickel/um-blog/tree/master/src`}>
-              Discuss on Twitter
+              Discuss on <strong>Twitter</strong>
             </a>
           </li>
           <li>
             <a href={`https://github.com/miickel/um-blog/tree/master/src`}>
-              Edit on GitHub
+              Edit on <strong>GitHub</strong>
             </a>
           </li>
           <li>
             <a href={`https://github.com/miickel/um-blog/tree/master/src`}>
-              Get in touch
+              Send an <strong>E-mail</strong>
             </a>
           </li>
         </ul>

@@ -1,48 +1,23 @@
 import React from "react"
-import { Link, graphql, StaticQuery } from "gatsby"
-import PreviewCompatibleImage from "./PreviewCompatibleImage.js"
+import { graphql, StaticQuery } from "gatsby"
+import ArticleCard from "./ArticleCard.js"
+import styles from "./BlogRoll.module.sass"
 
 const BlogRoll = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark
+  const { edges: posts = [] } = data.allMarkdownRemark
   return (
-    <div className="columns is-multiline">
-      {posts &&
-        posts.map(({ node: post }) => (
-          <div className="is-parent column is-6" key={post.id}>
-            <article
-              className={`blog-list-item tile is-child box notification ${
-                post.frontmatter.isFeatured ? "is-featured" : ""
-              }`}
-            >
-              <header>
-                {post.frontmatter.featuredImage && false ? ( // TODO: enable featured images
-                  <div className="featured-thumbnail">
-                    <PreviewCompatibleImage
-                      imageInfo={{
-                        image: post.frontmatter.featuredImage,
-                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                      }}
-                    />
-                  </div>
-                ) : null}
-                <p className="post-meta">
-                  <Link
-                    className="title has-text-primary is-size-4"
-                    to={post.fields.slug}
-                  >
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <span className="subtitle is-size-5 is-block">
-                    {post.frontmatter.date}
-                  </span>
-                </p>
-              </header>
-              <p>{post.frontmatter.description}</p>
-            </article>
-          </div>
-        ))}
-    </div>
+    <ul className={styles.roll}>
+      {posts.map(({ node: post }) => (
+        <li key={post.id}>
+          <ArticleCard
+            slug={post.fields.slug}
+            title={post.frontmatter.title}
+            featuredImage={post.frontmatter.featuredImage}
+            date={post.frontmatter.date}
+          />
+        </li>
+      ))}
+    </ul>
   )
 }
 
@@ -53,6 +28,7 @@ export default () => (
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { template: { eq: "BlogPost" } } }
+          limit: 3
         ) {
           edges {
             node {

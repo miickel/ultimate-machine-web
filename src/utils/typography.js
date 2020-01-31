@@ -9,8 +9,13 @@ Wordpress2016.overrideStyles = () => ({
   "a.anchor": {
     boxShadow: "none",
   },
+  h1: {
+    lineHeight: 1.5,
+  },
 })
 
-const typography = new Typography(Wordpress2016)
+const typography = new Typography({
+  ...Wordpress2016,
+})
 
 export default typography

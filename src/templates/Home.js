@@ -16,12 +16,12 @@ export const HomeTemplate = ({ title }) => (
       <h3>Articles</h3>
       <Link to="/articles">All Articles</Link>
     </div>
-    <BlogRoll />
+    <BlogRoll limit={3} />
     <div className={styles.header}>
       <h3>Products</h3>
       <Link to="/products">All Products</Link>
     </div>
-    <BlogRoll />
+    <BlogRoll limit={3} />
   </Layout>
 )
 

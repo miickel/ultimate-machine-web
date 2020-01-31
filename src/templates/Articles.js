@@ -1,25 +1,27 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout.js"
+import BlogRoll from "../components/BlogRoll.js"
 import HTMLContent from "../components/HTMLContent.js"
 
-export const AboutTemplate = ({ title, content }) => (
+export const ArticlesTemplate = ({ title, content }) => (
   <Layout>
     <h1>{title}</h1>
     <HTMLContent content={content} />
+    <BlogRoll />
   </Layout>
 )
 
-const AboutPage = ({ data }) => {
+const ArticlesPage = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
-  return <AboutTemplate title={frontmatter.title} content={html} />
+  return <ArticlesTemplate title={frontmatter.title} content={html} />
 }
 
-export default AboutPage
+export default ArticlesPage
 
 export const pageQuery = graphql`
-  query AboutTemplate {
-    markdownRemark(frontmatter: { template: { eq: "About" } }) {
+  query Articles {
+    markdownRemark(frontmatter: { template: { eq: "Articles" } }) {
       html
       frontmatter {
         title

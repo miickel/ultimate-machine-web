@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import ButtonList from "./ButtonList.js"
+import Button from "./Button.js"
 import styles from "./NavMenu.module.sass"
 
 const links = [
@@ -11,13 +13,13 @@ const links = [
 const NavMenu = () => {
   return (
     <nav className={styles.nav}>
-      <ul>
+      <ButtonList>
         {links.map(({ title, url }) => (
-          <li key={`nav-link-${url}`}>
-            <Link to={url}>{title}</Link>
-          </li>
+          <Button Elem={Link} to={url} key={`nav-link-${url}`}>
+            {title}
+          </Button>
         ))}
-      </ul>
+      </ButtonList>
     </nav>
   )
 }

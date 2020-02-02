@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout.js"
 import BlogRoll from "../components/BlogRoll.js"
+import Button from "../components/Button.js"
 import styles from "./Home.module.sass"
 
 export const HomeTemplate = ({ title }) => (
@@ -14,12 +15,16 @@ export const HomeTemplate = ({ title }) => (
     </div>
     <div className={styles.header}>
       <h3>Articles</h3>
-      <Link to="/articles">All Articles</Link>
+      <Button Elem={Link} to="/articles">
+        All Articles
+      </Button>
     </div>
     <BlogRoll limit={3} />
     <div className={styles.header}>
       <h3>Products</h3>
-      <Link to="/products">All Products</Link>
+      <Button Elem={Link} to="/products">
+        All Products
+      </Button>
     </div>
     <BlogRoll limit={3} />
   </Layout>

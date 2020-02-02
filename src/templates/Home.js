@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout.js"
 import BlogRoll from "../components/BlogRoll.js"
 import Button from "../components/Button.js"
+import { MdChevronRight } from "react-icons/md"
 import styles from "./Home.module.sass"
 
 export const HomeTemplate = ({ title }) => (
@@ -13,17 +14,19 @@ export const HomeTemplate = ({ title }) => (
         like a toddler.
       </h1>
     </div>
-    <div className={styles.header}>
-      <h3>Articles</h3>
-      <Button Elem={Link} to="/articles">
-        All Articles
-      </Button>
-    </div>
-    <BlogRoll limit={3} />
+
     <div className={styles.header}>
       <h3>Products</h3>
       <Button Elem={Link} to="/products">
-        All Products
+        <MdChevronRight /> All Products
+      </Button>
+    </div>
+    <BlogRoll limit={3} />
+
+    <div className={styles.header}>
+      <h3>Articles</h3>
+      <Button Elem={Link} to="/articles">
+        <MdChevronRight /> All Articles
       </Button>
     </div>
     <BlogRoll limit={3} />

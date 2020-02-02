@@ -24,7 +24,13 @@ const BlogRoll = ({ limit, wrap }) => {
               template
               date(formatString: "MMMM DD, YYYY")
               isFeatured
-              featuredImage
+              featuredImage {
+                childImageSharp {
+                  fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }

@@ -26,8 +26,8 @@ const ProductListItem = ({
           <h2>
             <Link to={slug}>{title}</Link>
           </h2>
-          <TagList tags={tags} />
           <p>{description}</p>
+          <TagList tags={tags} />
         </div>
         <PreviewCompatibleImage
           imageInfo={{

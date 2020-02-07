@@ -11,7 +11,7 @@ On his desk, one could find "The Ultimate Machine". A variation of Marvin Minsky
 
 > "I've always pursued my interests without much regard for final value or value to the world," he said cheerfully. "I've spent lots of time on totally useless things."
 
-This website and my company are named Ultimate Machine, as a tribute to Claude Shannon. I want everything I do to embody his level of passion, curiosity, grit, and humor. I hope to be able to contribute to the world in positive ways, but it's never been what drives me.
+This website and my company are named Ultimate Machine, as a tribute to Claude Shannon. I want everything I do to embody his level of passion, curiosity, creativity, grit, and humor. I hope to be able to contribute to the world in positive ways, but it's never been what drives me.
 
 ## What to Expect
 

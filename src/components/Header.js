@@ -5,7 +5,7 @@ import Logo from "./Logo.js"
 import NavMenu from "./NavMenu.js"
 import styles from "./Header.module.sass"
 
-const Header = () => {
+const Header = ({ isDarkMode, onDarkModeToggle }) => {
   return (
     <div className={styles.header}>
       <div className={styles.line} />
@@ -13,7 +13,7 @@ const Header = () => {
         <Link to="/">
           <Logo />
         </Link>
-        <NavMenu />
+        <NavMenu isDarkMode={isDarkMode} onDarkModeToggle={onDarkModeToggle} />
       </Container>
     </div>
   )

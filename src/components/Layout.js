@@ -25,7 +25,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header />
+      <Header
+        isDarkMode={isDarkMode}
+        onDarkModeToggle={() => setDarkMode(!isDarkMode)}
+      />
       <Container>
         <main>{children}</main>
       </Container>

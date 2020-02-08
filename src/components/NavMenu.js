@@ -15,7 +15,7 @@ const links = [
 const NavMenu = ({ isDarkMode, onDarkModeToggle }) => {
   return (
     <nav className={styles.nav}>
-      <ButtonList>
+      <ButtonList className={styles.list}>
         {links.map(({ title, url, ls }) =>
           ls ? (
             <DarkModeToggle

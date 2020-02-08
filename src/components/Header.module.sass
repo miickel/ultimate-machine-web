@@ -1,7 +1,6 @@
 .header
   position: relative
-  padding: 4rem 0
-  margin-bottom: 2rem
+  padding: 3rem 0
   user-select: none
 
 .line
@@ -10,21 +9,39 @@
   left: 0
   right: 0
   transform: translatey(-50%)
+  margin-top: 19px
   height: 7px
-  background: var(--colorFg)
-  opacity: .03
+  background: var(--colorHeaderFg)
+  opacity: .08
   z-index: -1
+  @media(min-width: 445px)
+    margin-top: 0
 
 .container
   display: flex
   align-items: center
   justify-content: space-between
-  >a:first-child
-    line-height: 0
-    background: var(--colorBg)
-    padding: 0 1rem
-    transition: background-color 850ms ease-out
-    color: var(--colorHeaderFg)
-    svg
-      width: 100px
-      height: auto
+  flex-direction: column
+  @media(min-width: 445px)
+    flex-direction: row
+
+.logo
+  line-height: 0
+  background: var(--colorBg)
+  padding: 0 1rem
+  margin-left: -1rem
+  transition: background-color 850ms ease-out
+  color: var(--colorHeaderFg)
+  margin-bottom: 1rem
+  svg
+    height: 22px
+    width: auto
+  svg:first-child
+    display: none
+
+  @media(min-width: 445px)
+    margin-bottom: 0
+    svg:first-child
+      display: block
+    svg:last-child
+      display: none

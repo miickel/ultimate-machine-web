@@ -1,9 +1,16 @@
 import React from "react"
+import classnames from "classnames"
 import styles from "./ButtonList.module.sass"
 
-const ButtonList = ({ children }) => {
+const ButtonList = ({ children, className }) => {
+  const cl = classnames(
+    {
+      [styles.buttons]: true,
+    },
+    className
+  )
   return (
-    <ul className={styles.buttons}>
+    <ul className={cl}>
       {children.map((Child, i) => (
         <li key={`bl-${i}`}>{Child}</li>
       ))}

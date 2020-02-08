@@ -41,7 +41,6 @@ const BlogRoll = ({ limit, wrap }) => {
   const cl = classnames({
     [styles.roll]: true,
     [styles.wrap]: limit !== undefined ? limit > 3 : true,
-    [styles.wrap]: true,
   })
 
   const { edges: posts = [] } = data.allMarkdownRemark

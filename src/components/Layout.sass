@@ -1,3 +1,5 @@
+@import '../sass/_variables.sass'
+
 \:root
   --color1: #1C2A3E
   --colorFg: #DFE6EF
@@ -24,3 +26,11 @@ body
 
 blockquote
   font-size: 1.15em
+
+.gatsby-highlight
+  margin: 0 -1rem
+  > *
+    border-radius: 0 !important
+
+    @media (min-width: 700px)
+      border-radius: .3rem !important

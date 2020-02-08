@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Container className={styles.container}>
+        <hr />
         <ul>
           <li>
             <a href={`https://github.com/miickel/um-blog/tree/master/src`}>

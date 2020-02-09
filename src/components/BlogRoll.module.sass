@@ -25,7 +25,12 @@
 
   &.wrap
     flex-wrap: wrap
+    flex-direction: row
     li
-      width: 33.333333%
       flex: inherit
       margin-top: .6rem
+      width: 100%
+      @media (min-width: 430px)
+        width: 50%
+      @media (min-width: 650px)
+        width: 33.333333%

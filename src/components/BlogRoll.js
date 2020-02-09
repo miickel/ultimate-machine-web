@@ -4,7 +4,29 @@ import { graphql, useStaticQuery } from "gatsby"
 import ArticleCard from "./ArticleCard.js"
 import styles from "./BlogRoll.module.sass"
 
-const BlogRoll = ({ limit, wrap }) => {
+export const BlogRollTemplate = ({ posts = [], limit }) => {
+  const cl = classnames({
+    [styles.roll]: true,
+    [styles.wrap]: limit !== undefined ? limit > 3 : true,
+  })
+
+  return (
+    <ul className={cl}>
+      {posts.slice(0, limit).map(({ node: post }) => (
+        <li key={post.id}>
+          <ArticleCard
+            slug={post.fields.slug}
+            title={post.frontmatter.title}
+            featuredImage={post.frontmatter.featuredImage}
+            date={post.frontmatter.date}
+          />
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+const BlogRoll = ({ limit }) => {
   const data = useStaticQuery(graphql`
     query BlogRollQuery {
       allMarkdownRemark(
@@ -38,27 +60,9 @@ const BlogRoll = ({ limit, wrap }) => {
     }
   `)
 
-  const cl = classnames({
-    [styles.roll]: true,
-    [styles.wrap]: limit !== undefined ? limit > 3 : true,
-  })
-
   const { edges: posts = [] } = data.allMarkdownRemark
 
-  return (
-    <ul className={cl}>
-      {posts.slice(0, limit).map(({ node: post }) => (
-        <li key={post.id}>
-          <ArticleCard
-            slug={post.fields.slug}
-            title={post.frontmatter.title}
-            featuredImage={post.frontmatter.featuredImage}
-            date={post.frontmatter.date}
-          />
-        </li>
-      ))}
-    </ul>
-  )
+  return <BlogRollTemplate posts={posts} limit={limit} />
 }
 
 export default BlogRoll

@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout.js"
 import BlogRoll from "../components/BlogRoll.js"
+import ArticleRoll from "../components/ArticleRoll.js"
 import Button from "../components/Button.js"
 import { MdChevronRight } from "react-icons/md"
 import styles from "./Home.module.sass"
@@ -21,7 +22,7 @@ export const HomeTemplate = ({ title }) => (
         <MdChevronRight /> All Products
       </Button>
     </div>
-    <BlogRoll limit={3} />
+    <ArticleRoll limit={3} />
 
     <div className={styles.header}>
       <h3>Articles</h3>

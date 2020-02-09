@@ -48,7 +48,12 @@ const ProductListItem = ({
             </div>
             <ButtonList>
               {url && (
-                <Button Elem="a" href={url}>
+                <Button
+                  Elem="a"
+                  href={url}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
                   <MdOpenInBrowser /> Explore
                 </Button>
               )}

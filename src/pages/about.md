@@ -15,11 +15,11 @@ This website and my company are named Ultimate Machine, as a tribute to Claude S
 
 ## What to Expect
 
-On these pages, I share my thoughts on whatever I find interesting, stuff I've made and some of my learnings I think others might find interesting. I'm a 33-year-old guy from Sweden. I've worked professionally with Software Engineering, UX and Graphical Design for 10+ years, primarily in the freelancing and start-up world. These days I'm a full-time Indie Hacker, which means I work only for myself (in terms of time and ownership) building my products. I would like to share my entrepreneurial journey with anyone interested, while I improve upon my writing skills.
+On these pages, I share my thoughts on whatever I find interesting, stuff I've made and some of my learnings I think others might find interesting. I'm a 33-year-old guy from Sweden. I've worked professionally with Software Engineering, UX and Graphical Design for 10+ years, primarily in the freelancing and start-up world. These days I'm a full-time [Indie Hacker](https://www.urbandictionary.com/define.php?term=indie%20hacker), which means I work only for myself (in terms of time and ownership) building my products. I would like to share my entrepreneurial journey with anyone interested, while I improve upon my writing skills.
 
-Human peak performance and health, in general, is also a big interest of mine. I've been in the military and I constantly challenge myself, both mentally and physically. I read and digest a lot of information because I'm curious, it helps me relax and I'm always eager to learn new things. When I read I tend to step outside of my comfort zone a bit and go beyond Software and IT. Anything that'll give me perspective on things will do. Lately, I've been learning about the mind, body, and longevity but I've also read Anna Kendrick's autobiography and Siddhartha...
+Human peak performance and health, in general, is also a big interest of mine. I've been in the military and I constantly challenge myself, both mentally and physically. I read and digest a lot of information because I'm curious, it helps me relax and I'm always eager to learn new things. When I read I tend to step outside of my comfort zone a bit and go beyond Software and IT. Anything that'll give me perspective on things will do. Lately, I've been learning about the mind, body, and longevity but I've also read Anna Kendrick's autobiography and Siddhartha.
 
-So in short, expect to be surprised with anything.
+While quantitative trading, investing and world economics also are interests of mine, I won't write much about it. I've tried once before, but it only ended up with lots of people asking me for stock tips. I will, however, try to incorporate the mindset, thoughts, and ideas required for being successful in trading with my other topics.
 
 ## Open Source
 

@@ -26,8 +26,8 @@ const BlogRoll = ({ limit, wrap }) => {
               isFeatured
               featuredImage {
                 childImageSharp {
-                  fluid(maxWidth: 2048, quality: 100) {
-                    ...GatsbyImageSharpFluid
+                  fluid(maxWidth: 200, quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }

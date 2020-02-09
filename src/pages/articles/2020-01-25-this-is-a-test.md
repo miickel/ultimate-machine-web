@@ -4,7 +4,7 @@ title: Goodbye, Clean Code
 date: 2019-01-11T12:36:34.423Z
 description: Let clean code guide you. Then let it go.
 isFeatured: false
-featuredImage: /img/IMG_0066.PNG
+featuredImage: /img/pt-tutorial-face-crop.jpg
 tags:
   - Sleep
   - Feedback

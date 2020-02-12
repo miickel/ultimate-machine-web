@@ -1,0 +1,107 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "article"
+    label: "Article"
+    folder: "src/pages/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template",
+          name: "template",
+          widget: "hidden",
+          default: "BlogPost",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Post", name: "isFeatured", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredImage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+
+  - name: "products"
+    label: "Product"
+    folder: "src/pages/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template",
+          name: "template",
+          widget: "hidden",
+          default: "Product",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Start Date", name: "startDate", widget: "datetime" }
+      - { label: "End Date", name: "endDate", widget: "datetime" }
+      - { label: "Featured Product", name: "isFeatured", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredImage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Landing Page"
+        name: "index"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "Home",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Hero Text, name: heroText, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/products/index.md"
+        label: "Products Page"
+        name: "products"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "Products",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/articles/index.md"
+        label: "Articles Page"
+        name: "articles"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "Articles",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "About",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }

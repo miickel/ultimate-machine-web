@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "ultimate-machine-landing",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Ultimate Machine web site.",
+  "version": "0.2.0",
+  "author": "Mickel Andersson <mickel@ultimatemachine.se>",
   "dependencies": {
     "classnames": "^2.2.6",
     "eslint-plugin-graphql": "^3.1.1",
@@ -52,7 +52,7 @@
     "pretty-quick": "^2.0.1"
   },
   "keywords": [
-    "gatsby"
+    "ultimate-machine"
   ],
   "license": "MIT",
   "scripts": {
@@ -67,10 +67,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/miickel/ultimate-machine-web"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/miickel/ultimate-machine-web/issues"
   },
   "husky": {
     "hooks": {

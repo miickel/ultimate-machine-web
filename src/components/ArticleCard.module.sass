@@ -1,0 +1,39 @@
+.card
+  display: flex
+  flex-direction: column
+  align-items: space-between
+  justify-content: space-between
+  height: 100%
+  text-decoration: none
+  user-select: none
+  overflow: hidden
+  position: relative
+  padding-bottom: 4rem
+  &:hover
+    .featWrap
+      border-radius: 200px 20px 200px 20px
+      filter: grayscale(0)
+
+.date
+  position: absolute
+  right: 1rem
+  bottom: 1rem
+  font-size: .7em
+  span
+    opacity: .6
+
+.featWrap
+  position: absolute
+  left: 0
+  bottom: 0
+  border-radius: 200px
+  border-radius: 200px 10px 200px 0
+  overflow: hidden
+  transform: translate(-40%, 40%)
+  transition: all 350ms ease-out
+  transition-delay: 100ms
+  filter: grayscale(1)
+
+.featuredImage
+  width: 5rem
+  height: 5rem

@@ -1,0 +1,27 @@
+.button
+  display: flex
+  align-items: center
+  font-family: 'JetBrains Mono'
+  font-size: .7em
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: .1em
+  font-weight: 900
+  padding: .3rem .5rem
+  border-radius: 4px
+  transition: background-color 180ms ease-out, opacity 180ms ease-out
+  background: none
+  border: none
+  &:hover,
+  &:focus
+    // color: var(--colorBg)
+    background: rgba(0,0,0,.05)
+  &:active
+    color: var(--colorBg)
+    background: var(--colorFg)
+    opacity: .3
+    position: relative
+  svg
+    margin-right: .3em
+    width: 1.5em
+    height: 1.5em

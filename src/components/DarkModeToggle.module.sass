@@ -1,0 +1,36 @@
+.toggle
+  margin-left: .2rem
+  input
+    display: none
+    &:checked + label:after
+      top: calc(100% - 2px)
+      transform: translatey(-100%)
+  label
+    display: block
+    position: relative
+    overflow: hidden
+    text-indent: -9999px
+    width: 8px
+    height: 12px
+    border-radius: 100px
+    color: #fff
+    background: var(--colorHeaderFg)
+    cursor: pointer
+
+    &:after
+      content: ''
+      position: absolute
+      left: 2px
+      top: 2px
+      width: 4px
+      height: 4px
+      border-radius: 100px
+
+    &:after
+      background: var(--colorBg)
+      transition: all 140ms ease-out
+
+    &:active
+      &:after
+        height: 7px
+

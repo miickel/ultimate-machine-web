@@ -1,0 +1,45 @@
+.item
+  margin: 0
+  h2
+    margin-bottom: .5em
+    a
+      text-decoration: none
+
+.card
+  display: block
+  margin: 0
+  padding: 0
+  user-select: none
+
+.content
+  padding: 1.5rem
+
+.buttons
+  display: flex
+  list-style: none
+  align-items: center
+  justify-content: flex-end
+  margin: 0
+  padding: 0
+  li
+    margin: 0
+  li + li
+    margin-left: 1rem
+  a
+    text-decoration: none
+
+.footer
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.date
+  font-size: .7em
+  span
+    opacity: .6
+    transition: opacity 200ms ease-in
+    &:nth-child(2)
+      border-bottom: 1px dotted var(--color1)
+      cursor: help
+      &:hover
+        opacity: 1

@@ -2,8 +2,9 @@
 template: About
 title: About
 ---
-
 Claude Elwood Shannon published the article "A Mathematical Theory of Communication" in 1948. The paper introduced the term "bit", information entropy and redundancy. Concepts that led to revolutionary changes in data storage and transmission. Today, these concepts are all cornerstones of information technology and the Internet. Without them, it's hard to imagine any form of digital communication at all.
+
+![](/img/tayl-app-desktop.png)
 
 Shannon was a genius known as "the father of Information Theory". He played in the same league as Einstein, Newton and Alan Turing. Meanwhile, he also had a playful side, which earned him the nickname "doctor of juggling". Many know him for his valuable contributions to MIT, Bell Labs, and science in general. But his lesser-known inventions include a rocket-powered Frisbee. Yes, that's a Frisbee powered by real rockets! He once made a flame-throwing trumpet, and he designed a "mind-reading" machine.
 

@@ -8,17 +8,20 @@ import Container from "./Container.js"
 
 const DARK_SIDE = "um-theme-dark"
 
-const detectDarkMode = () => {
-  const ls = localStorage.getItem(DARK_SIDE)
-  if (ls) return ls === "true"
-  return (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  )
-}
-
 const Layout = ({ children }) => {
-  const [isDarkMode, setDarkMode] = useState(detectDarkMode())
+  const [isDarkMode, setDarkMode] = useState()
+
+  useEffect(() => {
+    const detectDarkMode = () => {
+      const ls = localStorage.getItem(DARK_SIDE)
+      if (ls) return ls === "true"
+      return (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      )
+    }
+    setDarkMode(detectDarkMode())
+  }, [])
 
   useEffect(() => {
     document.body.className = isDarkMode ? "theme--dark" : "theme--light"

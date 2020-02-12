@@ -4,17 +4,17 @@ import Layout from "../components/Layout.js"
 import BlogRoll from "../components/BlogRoll.js"
 import ArticleRoll from "../components/ArticleRoll.js"
 import Button from "../components/Button.js"
+import HTMLContent from "../components/HTMLContent.js"
 import { MdChevronRight } from "react-icons/md"
 import styles from "./Home.module.sass"
 
-export const HomeTemplate = ({ title }) => (
+export const HomeTemplate = ({ title, heroText, content }) => (
   <Layout>
     <div className={styles.hero}>
-      <h1>
-        Hi! I’m Mickel - a consistent person doing whimsical things. Sort of
-        like a toddler.
-      </h1>
+      <h1>{heroText}</h1>
     </div>
+
+    <HTMLContent content={content} />
 
     <div className={styles.header}>
       <h3>Products</h3>
@@ -35,8 +35,14 @@ export const HomeTemplate = ({ title }) => (
 )
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
-  return <HomeTemplate title={frontmatter.title} />
+  const { frontmatter, html } = data.markdownRemark
+  return (
+    <HomeTemplate
+      title={frontmatter.title}
+      heroText={frontmatter.heroText}
+      content={html}
+    />
+  )
 }
 
 export default IndexPage
@@ -44,8 +50,10 @@ export default IndexPage
 export const pageQuery = graphql`
   query HomeTemplate {
     markdownRemark(frontmatter: { template: { eq: "Home" } }) {
+      html
       frontmatter {
         title
+        heroText
       }
     }
   }

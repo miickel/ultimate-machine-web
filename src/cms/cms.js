@@ -4,4 +4,4 @@ import BlogPostPreview from "./templates/BlogPostPreview.js"
 
 CMS.registerMediaLibrary(cloudinary)
 
-CMS.registerPreviewTemplate("blog", BlogPostPreview)
+CMS.registerPreviewTemplate("article", BlogPostPreview)

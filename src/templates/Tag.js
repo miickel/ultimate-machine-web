@@ -10,7 +10,7 @@ const Tag = ({ data, pageContext }) => {
   const tag = pageContext.tag
   const title = site.siteMetadata.title
   const totalCount = allMarkdownRemark.totalCount
-  const tagHeader = `${totalCount} article${
+  const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with “${tag}”`
 
@@ -30,7 +30,7 @@ const Tag = ({ data, pageContext }) => {
 
 export default Tag
 
-export const tagsPageQuery = graphql`
+export const browseTagPageQuery = graphql`
   query BrowseTag($tag: String) {
     site {
       siteMetadata {

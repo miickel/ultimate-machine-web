@@ -2,15 +2,23 @@ import React from "react"
 import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout.js"
+import Content from "../components/Content.js"
 import HTMLContent from "../components/HTMLContent.js"
 
-export const ProductTemplate = ({ title, description, content, helmet }) => {
+export const ProductTemplate = ({
+  title,
+  description,
+  content,
+  helmet,
+  contentComponent,
+}) => {
+  const PostContent = contentComponent || Content
   return (
     <section>
       {helmet}
       <h1>{title}</h1>
       <p>{description}</p>
-      <HTMLContent content={content} />
+      <PostContent content={content} />
     </section>
   )
 }
@@ -25,6 +33,7 @@ const Product = ({ data }) => {
         title={title}
         description={description}
         content={post.html}
+        contentComponent={HTMLContent}
         helmet={
           <Helmet>
             <title>{title}</title>

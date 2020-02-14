@@ -2,17 +2,27 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout.js"
 import HTMLContent from "../components/HTMLContent.js"
+import Content from "../components/Content.js"
 
-export const AboutTemplate = ({ title, content }) => (
-  <Layout>
-    <h1>{title}</h1>
-    <HTMLContent content={content} />
-  </Layout>
-)
+export const AboutTemplate = ({ title, content, contentComponent }) => {
+  const PostContent = contentComponent || Content
+  return (
+    <Layout>
+      <h1>{title}</h1>
+      <PostContent content={content} />
+    </Layout>
+  )
+}
 
 const AboutPage = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
-  return <AboutTemplate title={frontmatter.title} content={html} />
+  return (
+    <AboutTemplate
+      title={frontmatter.title}
+      content={html}
+      contentComponent={HTMLContent}
+    />
+  )
 }
 
 export default AboutPage

@@ -60,7 +60,7 @@ exports.createPages = ({ actions, graphql }) => {
 
       createPage({
         path: tagPath,
-        component: path.resolve(`src/templates/Tags.js`),
+        component: path.resolve(`src/templates/Tag.js`),
         context: {
           tag,
         },

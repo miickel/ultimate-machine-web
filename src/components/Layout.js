@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import "../utils/prism-theme.css"
 import "./Layout.sass"
@@ -31,11 +32,14 @@ const Layout = ({ children }) => {
     localStorage.setItem(DARK_SIDE, isDarkMode)
   }, [isDarkMode])
 
-  const data = useStaticQuery(graphql`
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
@@ -43,6 +47,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{siteMetadata.title}</title>
+        <meta name="description" content={siteMetadata.description} />
+      </Helmet>
       <Header
         isDarkMode={isDarkMode}
         onDarkModeToggle={() => setDarkMode(!isDarkMode)}

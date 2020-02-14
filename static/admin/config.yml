@@ -27,7 +27,12 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Post", name: "isFeatured", widget: "boolean" }
+      - {
+          label: "Featured Post",
+          name: "isFeatured",
+          widget: "boolean",
+          default: false,
+        }
       - { label: "Featured Image", name: "featuredImage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
@@ -47,8 +52,18 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Start Date", name: "startDate", widget: "datetime" }
-      - { label: "End Date", name: "endDate", widget: "datetime" }
-      - { label: "Featured Product", name: "isFeatured", widget: "boolean" }
+      - {
+          label: "End Date",
+          name: "endDate",
+          widget: "datetime",
+          required: false,
+        }
+      - {
+          label: "Featured Product",
+          name: "isFeatured",
+          widget: "boolean",
+          default: false,
+        }
       - { label: "Featured Image", name: "featuredImage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }

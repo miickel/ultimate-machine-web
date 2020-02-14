@@ -18,12 +18,11 @@ const Tag = ({ data, pageContext }) => {
     <Layout>
       <Helmet title={`${tag} | ${title}`} />
       <h1>Browse Tag</h1>
-      <p>
-        Can’t find what you’re looking for?{" "}
-        <Link to="/tags">Browse all tags</Link>.
-      </p>
       <h2>{tagHeader}</h2>
       <BlogRollTemplate posts={posts} />
+      <p style={{ marginTop: "3rem" }}>
+        <Link to="/tags">All tags</Link>
+      </p>
     </Layout>
   )
 }

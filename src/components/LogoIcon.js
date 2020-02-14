@@ -1,12 +1,13 @@
 import React from "react"
 
-const LogoIcon = () => (
+const LogoIcon = props => (
   <svg
     width="35"
     height="35"
     viewBox="0 0 35 35"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <path d="M6.85616 0H13.7123V13.7123H6.85616V0Z" fill="currentColor" />
     <path d="M6.85616 20.5685H0V34.2808H6.85616V20.5685Z" fill="currentColor" />

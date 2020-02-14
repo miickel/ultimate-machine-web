@@ -8,22 +8,12 @@ const TagList = ({ tags, linkFn }) => {
 
   const El = linkFn ? Link : "span"
 
-  const getProps = tag => {
-    const props = {
-      key: `tag-${tag}`,
-    }
-    return linkFn
-      ? {
-          ...props,
-          to: linkFn(tag),
-        }
-      : props
-  }
+  const getProps = tag => (linkFn ? { to: linkFn(tag) } : {})
 
   return (
     <ul className={styles.list}>
       {tags.map(tag => (
-        <li>
+        <li key={`tag-${tag}`}>
           <El {...getProps(tag)}>
             <Tag>{tag}</Tag>
           </El>

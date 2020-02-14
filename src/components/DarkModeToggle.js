@@ -6,7 +6,8 @@ const DarkModeToggle = ({ isDarkMode, onToggle }) => {
     <div className={styles.toggle}>
       <input
         type="checkbox"
-        checked={isDarkMode}
+        checked={isDarkMode ? isDarkMode : ""}
+        value={isDarkMode || ""}
         onChange={onToggle}
         id="dm-toggle"
         className={styles.checkbox}

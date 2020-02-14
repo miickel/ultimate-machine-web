@@ -11,9 +11,9 @@ const Header = ({ isDarkMode, onDarkModeToggle }) => {
     <div className={styles.header}>
       <div className={styles.line} />
       <Container className={styles.container}>
-        <Link to="/" className={styles.logo}>
-          <Logo />
-          <LogoIcon />
+        <Link to="/" className={styles.logo} title="Ultimate Machine">
+          <Logo alt="Ultimate Machine logo" />
+          <LogoIcon alt="Ultimate Machine logo icon" />
         </Link>
         <NavMenu isDarkMode={isDarkMode} onDarkModeToggle={onDarkModeToggle} />
       </Container>

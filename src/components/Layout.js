@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import "../fonts/fonts-common.css"
 import "../utils/prism-theme.css"
 import "./Layout.sass"
 import Header from "./Header.js"

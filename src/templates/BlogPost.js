@@ -1,10 +1,11 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { kebabCase } from "lodash"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout.js"
 import Content from "../components/Content.js"
 import HTMLContent from "../components/HTMLContent.js"
+import TagList from "../components/TagList.js"
 
 export const BlogPostTemplate = ({
   title,
@@ -21,15 +22,7 @@ export const BlogPostTemplate = ({
       <h1>{title}</h1>
       <p>{description}</p>
       <PostContent content={content} />
-      {tags.length > 0 && (
-        <ul>
-          {tags.map(tag => (
-            <li key={`tag-${tag}`}>
-              <Link to={`/tags/${kebabCase(tag)}`}>{tag}</Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      <TagList tags={tags} linkFn={tag => `/tags/${kebabCase(tag)}`} />
     </section>
   )
 }

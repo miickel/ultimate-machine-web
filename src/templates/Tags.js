@@ -2,6 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
+import { BlogRollTemplate } from "../components/BlogRoll.js"
 
 const Tags = ({ data, pageContext }) => {
   const { allMarkdownRemark, site } = data
@@ -16,29 +17,16 @@ const Tags = ({ data, pageContext }) => {
   const tag = pageContext.tag
   const title = site.siteMetadata.title
   const totalCount = allMarkdownRemark.totalCount
-  const tagHeader = `${totalCount} post${
+  const tagHeader = `${totalCount} article${
     totalCount === 1 ? "" : "s"
   } tagged with “${tag}”`
 
   return (
     <Layout>
-      <section className="section">
-        <Helmet title={`${tag} | ${title}`} />
-        <div className="container content">
-          <div className="columns">
-            <div
-              className="column is-10 is-offset-1"
-              style={{ marginBottom: "6rem" }}
-            >
-              <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-              <ul className="taglist">{postLinks}</ul>
-              <p>
-                <Link to="/tags/">Browse all tags</Link>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Helmet title={`${tag} | ${title}`} />
+      <h1>Tags</h1>
+      <h2>{tagHeader}</h2>
+      <BlogRollTemplate posts={posts} />
     </Layout>
   )
 }
@@ -60,11 +48,24 @@ export const tagsPageQuery = graphql`
       totalCount
       edges {
         node {
+          excerpt(pruneLength: 400)
+          id
           fields {
             slug
           }
           frontmatter {
             title
+            description
+            template
+            date(formatString: "MMMM DD, YYYY")
+            isFeatured
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 200, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
         }
       }

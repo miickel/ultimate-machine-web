@@ -3,6 +3,7 @@ import Helmet from "react-helmet"
 import { kebabCase } from "lodash"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout.js"
+import Content from "../components/Content.js"
 import HTMLContent from "../components/HTMLContent.js"
 
 export const BlogPostTemplate = ({
@@ -11,13 +12,15 @@ export const BlogPostTemplate = ({
   tags = [],
   content,
   helmet,
+  contentComponent,
 }) => {
+  const PostContent = contentComponent || Content
   return (
     <section>
-      {helmet}
+      {helmet || ""}
       <h1>{title}</h1>
       <p>{description}</p>
-      <HTMLContent content={content} />
+      <PostContent content={content} />
       {tags.length > 0 && (
         <ul>
           {tags.map(tag => (
@@ -42,6 +45,7 @@ const BlogPost = ({ data }) => {
         description={description}
         tags={tags}
         content={post.html}
+        contentComponent={HTMLContent}
         helmet={
           <Helmet>
             <title>{title}</title>

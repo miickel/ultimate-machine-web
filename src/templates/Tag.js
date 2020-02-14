@@ -16,7 +16,7 @@ const Tag = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Helmet title={`${tag} | ${title}`} />
+      <Helmet title={`Everything about ${tag}, by ${title}`} />
       <h1>Browse Tag</h1>
       <h2>{tagHeader}</h2>
       <BlogRollTemplate posts={posts} />

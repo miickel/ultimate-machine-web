@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import "../utils/prism-theme.css"
 import "./Layout.sass"
 import Header from "./Header.js"
@@ -31,19 +30,6 @@ const Layout = ({ children }) => {
   useEffect(() => {
     localStorage.setItem(DARK_SIDE, isDarkMode)
   }, [isDarkMode])
-
-  const {
-    site: { siteMetadata },
-  } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-    }
-  `)
 
   return (
     <>

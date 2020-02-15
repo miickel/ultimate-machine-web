@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { kebabCase } from "lodash"
 import { MdOpenInBrowser } from "react-icons/md"
 import Card from "./Card.js"
 import ButtonList from "./ButtonList.js"
@@ -27,7 +28,7 @@ const ProductListItem = ({
             <Link to={slug}>{title}</Link>
           </h2>
           <p>{description}</p>
-          <TagList tags={tags} />
+          <TagList tags={tags} linkFn={tag => `/tags/${kebabCase(tag)}`} />
         </div>
         <PreviewCompatibleImage
           imageInfo={{

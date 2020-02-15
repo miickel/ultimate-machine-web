@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
-import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import "../utils/prism-theme.css"
 import "./Layout.sass"
 import Header from "./Header.js"
 import Footer from "./Footer.js"
+import SEO from "./SEO.js"
 import Container from "./Container.js"
 
 const DARK_SIDE = "um-theme-dark"
@@ -47,10 +47,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Helmet>
-        <title>{siteMetadata.title}</title>
-        <meta name="description" content={siteMetadata.description} />
-      </Helmet>
+      <SEO title={siteMetadata.title} description={siteMetadata.description} />
       <Header
         isDarkMode={isDarkMode}
         onDarkModeToggle={() => setDarkMode(!isDarkMode)}

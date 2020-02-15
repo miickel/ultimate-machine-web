@@ -1,14 +1,13 @@
 import React from "react"
-import Helmet from "react-helmet"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 import { BlogRollTemplate } from "../components/BlogRoll.js"
 
 const Tag = ({ data, pageContext }) => {
-  const { allMarkdownRemark, site } = data
+  const { allMarkdownRemark } = data
   const posts = allMarkdownRemark.edges
   const tag = pageContext.tag
-  const title = site.siteMetadata.title
   const totalCount = allMarkdownRemark.totalCount
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
@@ -16,7 +15,7 @@ const Tag = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Helmet title={`Everything about ${tag}, by ${title}`} />
+      <SEO title={`Posts about ${tag}`} />
       <h1>Browse Tag</h1>
       <h2>{tagHeader}</h2>
       <BlogRollTemplate posts={posts} />
@@ -31,11 +30,6 @@ export default Tag
 
 export const browseTagPageQuery = graphql`
   query BrowseTag($tag: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }

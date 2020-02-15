@@ -1,21 +1,20 @@
 import React from "react"
-import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout.js"
 import Content from "../components/Content.js"
 import HTMLContent from "../components/HTMLContent.js"
+import SEO from "../components/SEO.js"
 
 export const ProductTemplate = ({
   title,
   description,
   content,
-  helmet,
   contentComponent,
 }) => {
   const PostContent = contentComponent || Content
   return (
     <section>
-      {helmet}
+      <SEO title={title} description={description} />
       <h1>{title}</h1>
       <p>{description}</p>
       <PostContent content={content} />
@@ -34,12 +33,6 @@ const Product = ({ data }) => {
         description={description}
         content={post.html}
         contentComponent={HTMLContent}
-        helmet={
-          <Helmet>
-            <title>{title}</title>
-            <meta name="description" content={description} />
-          </Helmet>
-        }
       />
     </Layout>
   )

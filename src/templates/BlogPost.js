@@ -1,24 +1,23 @@
 import React from "react"
-import Helmet from "react-helmet"
 import { kebabCase } from "lodash"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout.js"
 import Content from "../components/Content.js"
 import HTMLContent from "../components/HTMLContent.js"
 import TagList from "../components/TagList.js"
+import SEO from "../components/SEO.js"
 
 export const BlogPostTemplate = ({
   title,
   description,
   tags = [],
   content,
-  helmet,
   contentComponent,
 }) => {
   const PostContent = contentComponent || Content
   return (
     <section>
-      {helmet || ""}
+      <SEO title={title} description={description} />
       <h1>{title}</h1>
       <p>{description}</p>
       <PostContent content={content} />
@@ -39,12 +38,6 @@ const BlogPost = ({ data }) => {
         tags={tags}
         content={post.html}
         contentComponent={HTMLContent}
-        helmet={
-          <Helmet>
-            <title>{title}</title>
-            <meta name="description" content={description} />
-          </Helmet>
-        }
       />
     </Layout>
   )

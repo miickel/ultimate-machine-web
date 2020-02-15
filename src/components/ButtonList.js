@@ -1,8 +1,8 @@
-import React from "react"
-import classnames from "classnames"
-import styles from "./ButtonList.module.sass"
+import React from 'react'
+import classnames from 'classnames'
+import styles from './ButtonList.module.sass'
 
-const ButtonList = ({ children, className }) => {
+const ButtonList = ({children, className}) => {
   const cl = classnames(
     {
       [styles.buttons]: true,

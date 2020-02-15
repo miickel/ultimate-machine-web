@@ -1,14 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
-import Tag from "./Tag.js"
-import styles from "./TagList.module.sass"
+import React from 'react'
+import {Link} from 'gatsby'
+import Tag from './Tag.js'
+import styles from './TagList.module.sass'
 
-const TagList = ({ tags, linkFn }) => {
+const TagList = ({tags, linkFn}) => {
   if (!tags || tags.length === 0) return null
 
-  const El = linkFn ? Link : "span"
+  const El = linkFn ? Link : 'span'
 
-  const getProps = tag => (linkFn ? { to: linkFn(tag) } : {})
+  const getProps = tag => (linkFn ? {to: linkFn(tag)} : {})
 
   return (
     <ul className={styles.list}>

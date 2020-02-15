@@ -1,13 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
-import { kebabCase } from "lodash"
-import { MdOpenInBrowser } from "react-icons/md"
-import Card from "./Card.js"
-import ButtonList from "./ButtonList.js"
-import Button from "./Button.js"
-import TagList from "./TagList.js"
-import PreviewCompatibleImage from "./PreviewCompatibleImage.js"
-import styles from "./ProductListItem.module.sass"
+import React from 'react'
+import {Link} from 'gatsby'
+import {kebabCase} from 'lodash'
+import {MdOpenInBrowser} from 'react-icons/md'
+import Card from './Card.js'
+import ButtonList from './ButtonList.js'
+import Button from './Button.js'
+import TagList from './TagList.js'
+import PreviewCompatibleImage from './PreviewCompatibleImage.js'
+import styles from './ProductListItem.module.sass'
 
 const ProductListItem = ({
   title,
@@ -39,10 +39,10 @@ const ProductListItem = ({
         <div className={styles.content}>
           <footer className={styles.footer}>
             <div className={styles.date}>
-              <span>{startDate}</span>{" "}
+              <span>{startDate}</span>{' '}
               {endDate && (
                 <>
-                  {" - "}
+                  {' - '}
                   <span title={exitDescription}>{endDate}</span>
                 </>
               )}

@@ -1,13 +1,13 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import { kebabCase } from "lodash"
-import Layout from "../../components/Layout.js"
+import React from 'react'
+import {graphql, Link} from 'gatsby'
+import {kebabCase} from 'lodash'
+import Layout from '../../components/Layout.js'
 
 const Tags = ({
   data: {
-    allMarkdownRemark: { group },
+    allMarkdownRemark: {group},
     site: {
-      siteMetadata: { title },
+      siteMetadata: {title},
     },
   },
 }) => {
@@ -15,10 +15,10 @@ const Tags = ({
     <Layout>
       <h1>Tags</h1>
       <ul>
-        {group.map(({ fieldValue, totalCount }) => (
+        {group.map(({fieldValue, totalCount}) => (
           <li key={fieldValue}>
-            <Link to={`/tags/${kebabCase(fieldValue)}`}>{fieldValue}</Link> -{" "}
-            {totalCount} {totalCount === 1 ? "post" : "posts"}
+            <Link to={`/tags/${kebabCase(fieldValue)}`}>{fieldValue}</Link> -{' '}
+            {totalCount} {totalCount === 1 ? 'post' : 'posts'}
           </li>
         ))}
       </ul>

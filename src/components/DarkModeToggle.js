@@ -1,13 +1,13 @@
-import React from "react"
-import styles from "./DarkModeToggle.module.sass"
+import React from 'react'
+import styles from './DarkModeToggle.module.sass'
 
-const DarkModeToggle = ({ isDarkMode, onToggle }) => {
+const DarkModeToggle = ({isDarkMode, onToggle}) => {
   return (
     <div className={styles.toggle}>
       <input
         type="checkbox"
-        checked={isDarkMode ? isDarkMode : ""}
-        value={isDarkMode || ""}
+        checked={isDarkMode ? isDarkMode : ''}
+        value={isDarkMode || ''}
         onChange={onToggle}
         id="dm-toggle"
         className={styles.checkbox}

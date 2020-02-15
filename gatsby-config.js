@@ -9,24 +9,24 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,
-        name: "uploads",
+        name: 'uploads',
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
-        name: "pages",
+        name: 'pages',
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/images`,
-        name: "images",
+        name: 'images',
       },
     },
     {
@@ -49,17 +49,17 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-relative-images",
+            resolve: 'gatsby-remark-relative-images',
             options: {
-              name: "uploads",
+              name: 'uploads',
             },
           },
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
@@ -69,43 +69,43 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-copy-linked-files",
+            resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: "static",
+              destinationDir: 'static',
             },
           },
-          "gatsby-remark-autolink-headers",
+          'gatsby-remark-autolink-headers',
           {
-            resolve: "gatsby-remark-prismjs",
+            resolve: 'gatsby-remark-prismjs',
             options: {
-              inlineCodeMarker: "+",
+              inlineCodeMarker: '+',
             },
           },
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-smartypants",
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
           {
-            resolve: "gatsby-remark-external-links",
+            resolve: 'gatsby-remark-external-links',
             options: {
-              target: "_blank",
+              target: '_blank',
             },
           },
         ],
       },
     },
     {
-      resolve: "gatsby-plugin-netlify-cms",
+      resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
     {
-      resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
+      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
-        purgeOnly: ["/all.sass"], // applies purging only on the bulma css file
+        purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
-    "gatsby-plugin-netlify", // make sure to keep it last in the array
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

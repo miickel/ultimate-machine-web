@@ -1,14 +1,14 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/Layout.js"
-import BlogRoll from "../components/BlogRoll.js"
-import ArticleRoll from "../components/ArticleRoll.js"
-import Button from "../components/Button.js"
-import HTMLContent from "../components/HTMLContent.js"
-import { MdChevronRight } from "react-icons/md"
-import styles from "./Home.module.sass"
+import React from 'react'
+import {Link, graphql} from 'gatsby'
+import Layout from '../components/Layout.js'
+import BlogRoll from '../components/BlogRoll.js'
+import ArticleRoll from '../components/ArticleRoll.js'
+import Button from '../components/Button.js'
+import HTMLContent from '../components/HTMLContent.js'
+import {MdChevronRight} from 'react-icons/md'
+import styles from './Home.module.sass'
 
-export const HomeTemplate = ({ title, heroText, content }) => (
+export const HomeTemplate = ({title, heroText, content}) => (
   <Layout>
     <div className={styles.hero}>
       <h1>{heroText}</h1>
@@ -38,8 +38,8 @@ export const HomeTemplate = ({ title, heroText, content }) => (
   </Layout>
 )
 
-const IndexPage = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark
+const IndexPage = ({data}) => {
+  const {frontmatter, html} = data.markdownRemark
   return (
     <HomeTemplate
       title={frontmatter.title}
@@ -53,7 +53,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query HomeTemplate {
-    markdownRemark(frontmatter: { template: { eq: "Home" } }) {
+    markdownRemark(frontmatter: {template: {eq: "Home"}}) {
       html
       frontmatter {
         title

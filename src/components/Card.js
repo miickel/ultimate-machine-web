@@ -1,8 +1,8 @@
-import React from "react"
-import classnames from "classnames"
-import styles from "./Card.module.sass"
+import React from 'react'
+import classnames from 'classnames'
+import styles from './Card.module.sass'
 
-const Card = ({ children, className, Elem = "a", ...props }) => {
+const Card = ({children, className, Elem = 'a', ...props}) => {
   const cl = classnames(
     {
       [styles.card]: true,

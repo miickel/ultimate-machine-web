@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Container from "./Container.js"
 import LogoIcon from "./LogoIcon.js"
 import styles from "./Footer.module.sass"
@@ -25,7 +26,9 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <LogoIcon />
+        <Link to="/" title="Ultimate Machine">
+          <LogoIcon alt="Ultimate Machine logo icon" />
+        </Link>
       </Container>
     </footer>
   )

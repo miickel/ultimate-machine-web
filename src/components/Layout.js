@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <SEO title={siteMetadata.title} description={siteMetadata.description} />
+      <SEO title={null} />
       <Header
         isDarkMode={isDarkMode}
         onDarkModeToggle={() => setDarkMode(!isDarkMode)}

@@ -14,9 +14,7 @@ const TagList = ({tags, linkFn}) => {
     <ul className={styles.list}>
       {tags.map(tag => (
         <li key={`tag-${tag}`}>
-          <El {...getProps(tag)}>
-            <Tag>{tag}</Tag>
-          </El>
+          <Tag {...getProps(tag)}>{tag}</Tag>
         </li>
       ))}
     </ul>

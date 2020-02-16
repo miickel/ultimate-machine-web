@@ -1,12 +1,12 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import {kebabCase} from 'lodash'
-import {MdOpenInBrowser} from 'react-icons/md'
 import Card from './Card.js'
 import ButtonList from './ButtonList.js'
 import Button from './Button.js'
 import TagList from './TagList.js'
 import PreviewCompatibleImage from './PreviewCompatibleImage.js'
+import ExternalLink from './ExternalLink.js'
 import styles from './ProductListItem.module.sass'
 
 const ProductListItem = ({
@@ -20,51 +20,37 @@ const ProductListItem = ({
   endDate,
   exitDescription,
 }) => {
+  const FeaturedImage = (
+    <PreviewCompatibleImage
+      imageInfo={{
+        image: featuredImage,
+        alt: `Ultimate Machine - ${title}`,
+      }}
+    />
+  )
   return (
     <li className={styles.item}>
-      <Card Elem="div" to={slug} className={styles.card}>
-        <div className={styles.content}>
-          <h2>
-            <Link to={slug}>{title}</Link>
-          </h2>
-          <p>{description}</p>
-          <TagList tags={tags} linkFn={tag => `/tags/${kebabCase(tag)}`} />
-        </div>
-        <PreviewCompatibleImage
-          imageInfo={{
-            image: featuredImage,
-            alt: `Ultimate Machine - ${title}`,
-          }}
-        />
-        <div className={styles.content}>
-          <footer className={styles.footer}>
-            <div className={styles.date}>
-              <span>{startDate}</span>{' '}
-              {endDate && (
-                <>
-                  {' - '}
-                  <span title={exitDescription}>{endDate}</span>
-                </>
-              )}
-            </div>
-            <ButtonList>
-              {url && (
-                <Button
-                  Elem="a"
-                  href={url}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  <MdOpenInBrowser /> Explore
-                </Button>
-              )}
-              <Button Elem={Link} to={slug}>
-                Learn more
-              </Button>
-            </ButtonList>
-          </footer>
-        </div>
-      </Card>
+      <div className={styles.content}>
+        <h2>
+          <Link to={slug}>{title}</Link>
+        </h2>
+        <p>{description}</p>
+        {false && FeaturedImage}
+        <footer className={styles.footer}>
+          <div>
+            {url && <ExternalLink href={url} prefix={`View “${title}” on `} />}
+          </div>
+          <div className={styles.date}>
+            <span>{startDate}</span>{' '}
+            {endDate && (
+              <>
+                {' - '}
+                <span title={exitDescription}>{endDate}</span>
+              </>
+            )}
+          </div>
+        </footer>
+      </div>
     </li>
   )
 }

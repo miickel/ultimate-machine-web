@@ -1,45 +1,30 @@
 .item
   margin: 0
+  padding: 0 1rem
   h2
-    margin-bottom: .5em
     a
       text-decoration: none
-
-.card
-  display: block
-  margin: 0
-  padding: 0
-  user-select: none
-
-.content
-  padding: 1.5rem
-
-.buttons
-  display: flex
-  list-style: none
-  align-items: center
-  justify-content: flex-end
-  margin: 0
-  padding: 0
-  li
-    margin: 0
-  li + li
-    margin-left: 1rem
-  a
-    text-decoration: none
+  padding-top: 1rem
+  // box-shadow: 0 -2px 3px -2px rgba(0,0,0,.2)
 
 .footer
   display: flex
-  align-items: center
+  align-items: flex-end
   justify-content: space-between
+  font-size: .8em
+  flex-direction: column
+  @media (min-width: 650px)
+    flex-direction: row
+    align-items: center
+  a
+    text-decoration: none
 
 .date
-  font-size: .8em
   span
     opacity: .6
     transition: opacity 200ms ease-in
     &:nth-child(2)
-      border-bottom: 1px dotted var(--color1)
+      border-bottom: 1px dotted var(--colorFg)
       cursor: help
       &:hover
         opacity: 1

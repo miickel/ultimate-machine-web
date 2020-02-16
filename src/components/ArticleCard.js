@@ -1,10 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import Card from "./Card.js"
-import BackgroundImage from "gatsby-background-image"
-import styles from "./ArticleCard.module.sass"
+import React from 'react'
+import {Link} from 'gatsby'
+import Card from './Card.js'
+import BackgroundImage from 'gatsby-background-image'
+import styles from './ArticleCard.module.sass'
 
-const ArticleCard = ({ slug, featuredImage, title, date }) => {
+const ArticleCard = ({slug, featuredImage, title, date}) => {
   return (
     <Card Elem={Link} to={slug} className={styles.card}>
       <article>

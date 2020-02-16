@@ -1,56 +1,31 @@
-import React, { useEffect, useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import "../utils/prism-theme.css"
-import "./Layout.sass"
-import Header from "./Header.js"
-import Footer from "./Footer.js"
-import SEO from "./SEO.js"
-import Container from "./Container.js"
+import React, {useEffect, useState} from 'react'
+import '../utils/prism-theme.css'
+import './Layout.sass'
+import Header from './Header.js'
+import Footer from './Footer.js'
+import SEO from './SEO.js'
+import Container from './Container.js'
 
-const DARK_SIDE = "um-theme-dark"
+const isWindowThemeDark = () => window.__theme === 'theme--dark'
 
-const Layout = ({ children }) => {
-  const [isDarkMode, setDarkMode] = useState()
+const Layout = ({children}) => {
+  const [isDarkMode, setDarkMode] = useState(isWindowThemeDark())
 
   useEffect(() => {
-    const detectDarkMode = () => {
-      const ls = localStorage.getItem(DARK_SIDE)
-      if (ls) return ls === "true"
-      return (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      )
-    }
-    setDarkMode(detectDarkMode())
+    const checkTheme = () => setDarkMode(isWindowThemeDark())
+    window.onThemeChange = checkTheme
+    checkTheme()
+    return () => (window.onThemeChange = () => {})
   }, [])
-
-  useEffect(() => {
-    document.body.className = isDarkMode ? "theme--dark" : "theme--light"
-  }, [isDarkMode])
-
-  useEffect(() => {
-    localStorage.setItem(DARK_SIDE, isDarkMode)
-  }, [isDarkMode])
-
-  const {
-    site: { siteMetadata },
-  } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-    }
-  `)
 
   return (
     <>
-      <SEO title={siteMetadata.title} description={siteMetadata.description} />
+      <SEO title={null} />
       <Header
         isDarkMode={isDarkMode}
-        onDarkModeToggle={() => setDarkMode(!isDarkMode)}
+        onDarkModeToggle={() =>
+          window.setTheme(isDarkMode ? 'theme--light' : 'theme--dark')
+        }
       />
       <Container>
         <main>{children}</main>

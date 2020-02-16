@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-const Content = ({ content, ...props }) => {
+const Content = ({content, ...props}) => {
   return <div {...props}>{content}</div>
 }
 

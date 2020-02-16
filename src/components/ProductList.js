@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import ProductListItem from "./ProductListItem.js"
-import styles from "./ProductList.module.sass"
+import React from 'react'
+import {graphql, useStaticQuery} from 'gatsby'
+import ProductListItem from './ProductListItem.js'
+import styles from './ProductList.module.sass'
 
 const ProductList = () => {
   const data = useStaticQuery(graphql`
     query ProductListQuery {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___startDate] }
-        filter: { frontmatter: { template: { eq: "Product" } } }
+        sort: {order: DESC, fields: [frontmatter___startDate]}
+        filter: {frontmatter: {template: {eq: "Product"}}}
       ) {
         edges {
           node {
@@ -39,11 +39,11 @@ const ProductList = () => {
     }
   `)
 
-  const { edges: posts = [] } = data.allMarkdownRemark
+  const {edges: posts = []} = data.allMarkdownRemark
 
   return (
     <ul className={styles.list}>
-      {posts.map(({ node: { id, fields, frontmatter } }) => (
+      {posts.map(({node: {id, fields, frontmatter}}) => (
         <ProductListItem
           key={id}
           title={frontmatter.title}

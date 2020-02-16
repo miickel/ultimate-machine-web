@@ -1,13 +1,13 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { BlogRollTemplate } from "./BlogRoll.js"
+import React from 'react'
+import {useStaticQuery, graphql} from 'gatsby'
+import {BlogRollTemplate} from './BlogRoll.js'
 
-const ArticleRoll = ({ limit }) => {
+const ArticleRoll = ({limit}) => {
   const data = useStaticQuery(graphql`
     query ArticleRollQuery {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___startDate] }
-        filter: { frontmatter: { template: { eq: "Product" } } }
+        sort: {order: DESC, fields: [frontmatter___startDate]}
+        filter: {frontmatter: {template: {eq: "Product"}}}
       ) {
         edges {
           node {
@@ -36,7 +36,7 @@ const ArticleRoll = ({ limit }) => {
     }
   `)
 
-  const { edges: posts = [] } = data.allMarkdownRemark
+  const {edges: posts = []} = data.allMarkdownRemark
 
   return <BlogRollTemplate posts={posts} limit={limit} />
 }

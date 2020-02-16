@@ -1,10 +1,10 @@
-import React from "react"
-import classnames from "classnames"
-import { graphql, useStaticQuery } from "gatsby"
-import ArticleCard from "./ArticleCard.js"
-import styles from "./BlogRoll.module.sass"
+import React from 'react'
+import classnames from 'classnames'
+import {graphql, useStaticQuery} from 'gatsby'
+import ArticleCard from './ArticleCard.js'
+import styles from './BlogRoll.module.sass'
 
-export const BlogRollTemplate = ({ posts = [], limit }) => {
+export const BlogRollTemplate = ({posts = [], limit}) => {
   const cl = classnames({
     [styles.roll]: true,
     [styles.wrap]: limit !== undefined ? limit > 3 : true,
@@ -12,7 +12,7 @@ export const BlogRollTemplate = ({ posts = [], limit }) => {
 
   return (
     <ul className={cl}>
-      {posts.slice(0, limit).map(({ node: post }) => (
+      {posts.slice(0, limit).map(({node: post}) => (
         <li key={post.id}>
           <ArticleCard
             slug={post.fields.slug}
@@ -26,12 +26,12 @@ export const BlogRollTemplate = ({ posts = [], limit }) => {
   )
 }
 
-const BlogRoll = ({ limit }) => {
+const BlogRoll = ({limit}) => {
   const data = useStaticQuery(graphql`
     query BlogRollQuery {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { frontmatter: { template: { eq: "BlogPost" } } }
+        sort: {order: DESC, fields: [frontmatter___date]}
+        filter: {frontmatter: {template: {eq: "BlogPost"}}}
       ) {
         edges {
           node {
@@ -60,7 +60,7 @@ const BlogRoll = ({ limit }) => {
     }
   `)
 
-  const { edges: posts = [] } = data.allMarkdownRemark
+  const {edges: posts = []} = data.allMarkdownRemark
 
   return <BlogRollTemplate posts={posts} limit={limit} />
 }

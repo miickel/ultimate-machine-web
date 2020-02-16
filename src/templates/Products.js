@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout.js"
-import HTMLContent from "../components/HTMLContent.js"
-import ProductList from "../components/ProductList.js"
-import SEO from "../components/SEO.js"
+import React from 'react'
+import {graphql} from 'gatsby'
+import Layout from '../components/Layout.js'
+import HTMLContent from '../components/HTMLContent.js'
+import ProductList from '../components/ProductList.js'
+import SEO from '../components/SEO.js'
 
-export const ProductsTemplate = ({ title, content }) => (
+export const ProductsTemplate = ({title, content}) => (
   <Layout>
     <SEO
       title={title}
@@ -17,14 +17,14 @@ export const ProductsTemplate = ({ title, content }) => (
   </Layout>
 )
 
-const ProductsPage = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark
+const ProductsPage = ({data}) => {
+  const {frontmatter, html} = data.markdownRemark
   return <ProductsTemplate title={frontmatter.title} content={html} />
 }
 
 export const pageQuery = graphql`
   query Products {
-    markdownRemark(frontmatter: { template: { eq: "Products" } }) {
+    markdownRemark(frontmatter: {template: {eq: "Products"}}) {
       html
       frontmatter {
         title

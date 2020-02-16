@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout.js"
-import Content from "../components/Content.js"
-import HTMLContent from "../components/HTMLContent.js"
-import SEO from "../components/SEO.js"
+import React from 'react'
+import {graphql} from 'gatsby'
+import Layout from '../components/Layout.js'
+import Content from '../components/Content.js'
+import HTMLContent from '../components/HTMLContent.js'
+import SEO from '../components/SEO.js'
 
 export const ProductTemplate = ({
   title,
@@ -22,9 +22,9 @@ export const ProductTemplate = ({
   )
 }
 
-const Product = ({ data }) => {
-  const { markdownRemark: post } = data
-  const { title, description } = post.frontmatter
+const Product = ({data}) => {
+  const {markdownRemark: post} = data
+  const {title, description} = post.frontmatter
 
   return (
     <Layout>
@@ -42,7 +42,7 @@ export default Product
 
 export const pageQuery = graphql`
   query ProductPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       id
       html
       frontmatter {

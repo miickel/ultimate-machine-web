@@ -1,6 +1,9 @@
+@import "../sass/variables.sass"
+
 .nav
   background: var(--colorBg)
   padding: 0 1rem 0 .5rem
+  transition: themeTransition(background)
   @media(min-width: 445px)
     margin-right: -1rem
   a

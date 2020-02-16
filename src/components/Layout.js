@@ -6,13 +6,11 @@ import Footer from './Footer.js'
 import SEO from './SEO.js'
 import Container from './Container.js'
 
-const isWindowThemeDark = () => window.__theme === 'theme--dark'
-
 const Layout = ({children}) => {
-  const [isDarkMode, setDarkMode] = useState(isWindowThemeDark())
+  const [isDarkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
-    const checkTheme = () => setDarkMode(isWindowThemeDark())
+    const checkTheme = () => setDarkMode(window.__theme === 'theme--dark')
     window.onThemeChange = checkTheme
     checkTheme()
     return () => (window.onThemeChange = () => {})

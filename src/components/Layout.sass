@@ -4,20 +4,33 @@
   --color1: #1C2A3E
   --colorFg: #DFE6EF
   --colorBg: var(--color1)
-  --colorAnchorFg: var(--colorFg)
+  --colorAnchorFg: #8BFFAC
+  --colorAnchorHoverFg: var(--colorFg)
   --colorCodeBlock: #101C2D
-  --colorHeaderFg: #8BFFAC
+  --colorHeaderFg: var(--colorAnchorFg)
   --colorCardBg: #26354A
   --colorCardFg: #fff
+  --colorBtnBg: none
+  --colorBtnFg: var(--colorAnchorFg)
+  --colorBtnFocBg: var(--colorFg)
+  --colorBtnFocFg: var(--colorFg)
+  --colorBtnActiveBg: var(--colorFg)
+  --colorBtnActiveFg: var(--colorBg)
 
 .theme--light
   --colorFg: var(--color1)
   --colorBg: #FFFAF4
-  --colorAnchorFg: var(--colorFg)
+  --colorAnchorFg: #3695EE
+  --colorAnchorHoverFg: var(--colorFg)
   --colorCodeBlock: var(--color1)
-  --colorHeaderFg: var(--colorFg)
+  --colorHeaderFg: var(--colorAnchorFg)
   --colorCardBg: #fff
   --colorCardFg: var(--colorFg)
+  --colorBtnFg: var(--colorHeaderFg)
+  --colorBtnFocBg: red
+  --colorBtnFocFg: var(--colorFg)
+  --colorBtnActiveBg: var(--colorAnchorFg)
+  --colorBtnActiveFg: var(--colorBg)
 
 body
   color: var(--colorFg)

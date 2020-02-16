@@ -5,6 +5,9 @@ Wordpress2016.overrideStyles = () => ({
   a: {
     color: 'var(--colorAnchorFg)',
   },
+  'a:hover': {
+    color: 'var(--colorAnchorHoverFg)',
+  },
   // gatsby-remark-autolink-headers:
   'a.anchor': {
     boxShadow: 'none',

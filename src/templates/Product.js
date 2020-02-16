@@ -1,13 +1,18 @@
 import React from 'react'
+import {kebabCase} from 'lodash'
 import {graphql} from 'gatsby'
 import Layout from '../components/Layout.js'
 import Content from '../components/Content.js'
 import HTMLContent from '../components/HTMLContent.js'
+import TagList from '../components/TagList.js'
+import ExternalLink from '../components/ExternalLink.js'
 import SEO from '../components/SEO.js'
 
 export const ProductTemplate = ({
   title,
   description,
+  tags = [],
+  url,
   content,
   contentComponent,
 }) => {
@@ -18,19 +23,27 @@ export const ProductTemplate = ({
       <h1>{title}</h1>
       <p>{description}</p>
       <PostContent content={content} />
+      {url && (
+        <p>
+          <ExternalLink href={url} prefix={`View “${title}” on `} />
+        </p>
+      )}
+      <TagList tags={tags} linkFn={tag => `/tags/${kebabCase(tag)}`} />
     </section>
   )
 }
 
 const Product = ({data}) => {
   const {markdownRemark: post} = data
-  const {title, description} = post.frontmatter
+  const {title, description, tags, url} = post.frontmatter
 
   return (
     <Layout>
       <ProductTemplate
         title={title}
         description={description}
+        tags={tags}
+        url={url}
         content={post.html}
         contentComponent={HTMLContent}
       />
@@ -49,6 +62,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        tags
+        url
       }
     }
   }

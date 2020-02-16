@@ -17,9 +17,7 @@ export const HomeTemplate = ({title, heroText, content}) => (
     <HTMLContent content={content} />
 
     <div className={styles.header}>
-      <h3>
-        <Link to="/products">Products</Link>
-      </h3>
+      <h3>Products</h3>
       <Button Elem={Link} to="/products">
         <MdChevronRight /> All Products
       </Button>
@@ -27,9 +25,7 @@ export const HomeTemplate = ({title, heroText, content}) => (
     <ArticleRoll limit={3} />
 
     <div className={styles.header}>
-      <h3>
-        <Link to="/articles">Articles</Link>
-      </h3>
+      <h3>Articles</h3>
       <Button Elem={Link} to="/articles">
         <MdChevronRight /> All Articles
       </Button>

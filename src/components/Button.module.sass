@@ -10,16 +10,15 @@
   padding: .3rem .5rem
   border-radius: 4px
   transition: background-color 180ms ease-out, opacity 180ms ease-out
-  background: none
+  color: var(--colorBtnFg)
+  background: var(--colorBtnBg)
   border: none
   &:hover,
   &:focus
-    // color: var(--colorBg)
-    background: rgba(0,0,0,.05)
+    color: var(--colorBtnFocFg)
   &:active
-    color: var(--colorBg)
-    background: var(--colorFg)
-    opacity: .3
+    color: var(--colorBtnActiveFg)
+    background: var(--colorBtnActiveBg)
     position: relative
   svg
     margin-right: .3em

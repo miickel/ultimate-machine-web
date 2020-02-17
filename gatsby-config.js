@@ -8,6 +8,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-twitter`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -59,6 +60,15 @@ module.exports = {
             },
           },
           {
+            resolve: 'gatsby-remark-embed-video',
+            options: {
+              width: 668,
+              ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
+              related: false,
+              noIframeBorder: true,
+            },
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               // It's important to specify the maxWidth (in pixels) of
@@ -75,6 +85,7 @@ module.exports = {
             },
           },
           'gatsby-remark-autolink-headers',
+          'gatsby-remark-responsive-iframe',
           {
             resolve: 'gatsby-remark-prismjs',
             options: {

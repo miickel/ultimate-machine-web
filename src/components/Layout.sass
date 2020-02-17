@@ -41,9 +41,31 @@ blockquote
   font-size: 1.15em
 
 .gatsby-highlight
-  margin: 0 -1rem
+  margin: 0 -1rem 2rem -1rem
+  pre
+    padding: 1rem
   > *
     border-radius: 0 !important
 
     @media (min-width: 700px)
       border-radius: .3rem !important
+
+.twitter-tweet
+  margin: 0 auto
+
+.gatsby-resp-iframe-wrapper,
+.gatsby-resp-image-wrapper
+  margin: 0 -1rem !important
+  overflow: hidden
+  @media (min-width: 700px)
+    border-radius: .3rem !important
+
+
+.gatsby-highlight-code-line
+  display: block
+  margin-right: -1em
+  margin-left: -1em
+  padding-right: 1em
+  padding-left: 0.75em
+  border-left: 0.25em solid var(--colorBg)
+  background: rgba(255,255,255,.05)

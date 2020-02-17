@@ -21,7 +21,6 @@ export const ProductTemplate = ({
     <section>
       <SEO title={title} description={description} />
       <h1>{title}</h1>
-      <p>{description}</p>
       <PostContent content={content} />
       {url && (
         <p>

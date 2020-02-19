@@ -20,9 +20,7 @@ const ProductListItem = ({
         </h2>
         <p>{description}</p>
         <footer className={styles.footer}>
-          <div>
-            {url && <ExternalLink href={url} prefix={`View “${title}” on `} />}
-          </div>
+          <div>{url && <ExternalLink href={url} />}</div>
           <div className={styles.date}>
             <span>{startDate}</span>{' '}
             {endDate && (

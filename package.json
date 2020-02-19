@@ -10,6 +10,7 @@
     "gatsby": "^2.19.10",
     "gatsby-background-image": "^0.9.14",
     "gatsby-image": "^2.2.39",
+    "gatsby-plugin-catch-links": "^2.1.25",
     "gatsby-plugin-manifest": "^2.2.40",
     "gatsby-plugin-netlify": "^2.1.31",
     "gatsby-plugin-netlify-cms": "^4.1.37",

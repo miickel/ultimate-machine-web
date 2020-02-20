@@ -1,0 +1,8 @@
+{
+  "Source": "mickel@ultimatemachine.se",
+  "Template": "verify-email",
+  "Destination": {
+    "ToAddresses": ["mickel@ultimatemachine.se"]
+  },
+  "TemplateData": "{\"verifyUrl\":\"https://preview.ultimatemachine.se/newsletter\",\"unsubscribeUrl\":\"https://preview.ultimatemachine.se/newsletter\"}"
+}

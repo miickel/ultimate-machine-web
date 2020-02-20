@@ -10,7 +10,6 @@
     </mj-column>
     <mj-column>
       <mj-text mj-class="text small" align="right" padding-top="15px">
-        <a class="nostyle" href="{webview_url}">View in browser</a>
       </mj-text>
     </mj-column>
   </mj-group>

@@ -13,6 +13,7 @@
   color: var(--colorBtnFg)
   background: var(--colorBtnBg)
   border: none
+  outline: none
   &:hover,
   &:focus
     color: var(--colorBtnFocFg)
@@ -20,7 +21,19 @@
     color: var(--colorBtnActiveFg)
     background: var(--colorBtnActiveBg)
     position: relative
-  svg
+  > *:first-child
     margin-right: .3em
     width: 1.5em
     height: 1.5em
+  &:disabled
+    opacity: .5
+    cursor: not-allowed
+    &:hover,
+    &:focus,
+    &:active
+      color: var(--colorBtnFg)
+      background: var(--colorBtnBg)
+
+fieldset:disabled
+  .button
+    cursor: wait

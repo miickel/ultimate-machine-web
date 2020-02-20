@@ -14,6 +14,7 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 303,
+    body: '',
     headers: {
       Location,
     },

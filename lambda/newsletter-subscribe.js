@@ -1,5 +1,6 @@
 const {validate} = require('email-validator')
 const {getSheet} = require('./lib/sheets.js')
+const {sign} = require('./lib/jwt.js')
 
 exports.handler = async (event, context) => {
   const {email} = event.queryStringParameters
@@ -11,10 +12,13 @@ exports.handler = async (event, context) => {
 
     return {
       statusCode: 200,
+      body: 'ok',
     }
   } catch (err) {
+    console.error(err)
     return {
       statusCode: 400,
+      body: 'fail',
     }
   }
 }
@@ -24,15 +28,15 @@ async function subscribe(email) {
   const rows = await sheet.getRows()
   const existing = rows.find(row => row.email === email)
 
-  if (existing) throw 'email already subscribed'
+  if (existing) throw 'exists'
 
-  const secret = createSecret(email)
+  const secret = sign({
+    email,
+  })
 
   await sheet.addRow({
     email,
     secret,
     createdAt: new Date(),
   })
-
-  console.log('subscribed!')
 }

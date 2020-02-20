@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import SubmitButton from './SubmitButton.js'
-import LightSpinner from './LightSpinner.js'
 import {newsletterSubscribe} from '../api.js'
 
 const states = {

@@ -1,0 +1,25 @@
+<mj-section background-color="#ffffff" padding-top="100px" />
+<mj-section mj-class="section-divider" />
+
+<mj-section background-color="#ffffff" padding-top="16px">
+  <mj-column>
+    <mj-text mj-class="text small" align="left">
+      <a class="link--footer" href="https://www.ultimatemachine.se/newsletter"
+        >Ultimate Machine Newsletter</a
+      >
+      <br /><a class="link--footer" href="https://www.twitter.com/miickel"
+        >Follow @miickel on Twitter</a
+      >
+    </mj-text>
+  </mj-column>
+  <mj-column>
+    <mj-text mj-class="text small" align="right">
+      Ultimate Machine
+      <br />Gunn Wållgrens Gata 5 <br />412 49 Gothenburg, Sweden <br /><br /><a
+        class="link--footer"
+        href="{{unsubscribeUrl}}"
+        >Unsubscribe</a
+      >
+    </mj-text>
+  </mj-column>
+</mj-section>

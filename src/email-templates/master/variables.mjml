@@ -1,0 +1,23 @@
+<mj-attributes>
+  <mj-class
+    name="text"
+    color="#253C53"
+    line-height="1.5em"
+    font-size="16px"
+    font-family="Roboto, Helvetica Neue, Helvetica, Arial, sans-serif"
+  />
+  <mj-class name="section-divider" padding="1px 0" background-color="#f4f4f6" />
+  <mj-class name="small" color="#253C53" font-size="12px" />
+  <mj-class
+    name="footer"
+    color="#253C53"
+    font-size="30px"
+    text-decoration="none"
+  />
+</mj-attributes>
+
+<mj-style inline="inline">
+  .nostyle { color: inherit; text-decoration: none } .link--footer { color:
+  #3695EE; text-decoration: none !important; font-weight: 600; } a { color:
+  #3695EE; }
+</mj-style>

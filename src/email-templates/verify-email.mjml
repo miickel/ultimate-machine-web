@@ -1,0 +1,30 @@
+<mjml>
+  <mj-head>
+    <mj-include path="./master/variables.mjml" />
+  </mj-head>
+
+  <mj-body background-color="#ffffff">
+    <mj-include path="./master/header.mjml" />
+
+    <mj-section background-color="#ffffff">
+      <mj-column>
+        <mj-text mj-class="text">
+          <p>Hello there,</p>
+          <p>
+            Someone just signed you up for the
+            <strong>Ultimate Machine Newsletter</strong>.
+          </p>
+          <p>
+            You need to
+            <a href="{{verifyUrl}}">verify your e-mail address</a> to activate.
+          </p>
+          <p>Cute GIFs await those who do! 😍</p>
+        </mj-text>
+
+        <mj-include path="./master/signature.mjml" />
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./master/footer.mjml" />
+  </mj-body>
+</mjml>

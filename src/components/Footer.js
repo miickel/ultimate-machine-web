@@ -22,7 +22,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href={`https://github.com/miickel/um-blog/tree/master/src`}
+              href={`https://github.com/miickel/ultimate-machine-web`}
               target="_blank"
               rel="nofollow noopener noreferrer"
             >

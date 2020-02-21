@@ -36,7 +36,9 @@ const NewsletterForm = () => {
 
   return (
     <>
-      <p>Enter your email address to join the newsletter.</p>
+      <p>
+        Get my <strong>best content</strong> by email.
+      </p>
       <form onSubmit={handleSubmit}>
         <fieldset disabled={state === states.submitting}>
           <label>
@@ -53,7 +55,7 @@ const NewsletterForm = () => {
               isSubmitting={state === states.submitting}
               disabled={!Boolean(email)}
             >
-              Join
+              Subscribe
             </SubmitButton>
           </div>
         </fieldset>

@@ -6,7 +6,7 @@ const InlineNewsletter = () => {
   return (
     <div className={styles.wrap}>
       <div>
-        <h3>Newsletter</h3>
+        <h3>Subscribe to the Newsletter</h3>
         <NewsletterForm />
       </div>
     </div>

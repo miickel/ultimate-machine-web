@@ -1,10 +1,10 @@
 ---
 template: BlogPost
-title: I Quit My CTO Job to Work on My Own (Non-Existing) Projects
+title: I Quit My CTO Job to Work on My Own Projects
 description: This is the first post.
 date: 2020-02-13T10:46:39.888Z
 isFeatured: false
-featuredImage: '/img/IMG_1475 (1).jpg'
+featuredImage: '/img/ultimate-machine-icon-reversed.png'
 tags:
   - Career
   - Entrepreneurship
@@ -13,6 +13,8 @@ tags:
 ---
 
 For the past five and a half years I've been working as CTO of a startup. We worked to digitize the personal development space, intending to improve people's well-being. Think Tony Robbins, BJ Fogg, James Clear, meditation CDs and such, all re-packaged into apps for the modern consumer. Throughout the years our positioning changed, but what remained was the focus on goal achievement and life balance. I love the company and all the people working there. We achieved great things during our time together. But lately, I've had this growing itch to go do something on my own, and now it's outgrown my reasons to stay.
+
+![Ultimate Machine Logo](/img/ultimate-machine-logo-landscape.png)
 
 I'm starting [Ultimate Machine](/about) as the sole founder. It will be a company to manage a suite of software products and services. At the moment of my writing this, there's about $350-$400 of MRR to my name, generated from past [online projects](/products). This is not enough to sustain my living expenses in Sweden. Although I've had the option of part-time employment, I feel that what's left of 80%, 50% or even 25% is not enough to get into **the zone** needed to create useful products that people love to use. It takes a lot of focused work, free of distractions.
 

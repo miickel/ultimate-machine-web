@@ -45,7 +45,7 @@ async function subscribe(email) {
   const existing = rows.find(row => row.email === email)
 
   if (existing) {
-    if (existing.confirmedAt) throw 'exists'
+    if (existing.confirmedAt && !existing.unsubscribedAt) throw 'exists'
     await existing.delete()
   }
 

@@ -7,6 +7,7 @@ import HTMLContent from '../components/HTMLContent.js'
 import TagList from '../components/TagList.js'
 import ExternalLink from '../components/ExternalLink.js'
 import SEO from '../components/SEO.js'
+import InlineNewsletter from '../components/InlineNewsletter.js'
 
 export const ProductTemplate = ({
   title,
@@ -22,6 +23,7 @@ export const ProductTemplate = ({
       <SEO title={title} description={description} />
       <h1>{title}</h1>
       <PostContent content={content} />
+      <InlineNewsletter />
       {url && (
         <p>
           <ExternalLink href={url} prefix={`View “${title}” on `} />

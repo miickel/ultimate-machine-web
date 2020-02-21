@@ -231,6 +231,4 @@ Flutter is great for this sort of stuff. Creativity calls for experimentation, a
 
 `youtube: https://youtu.be/VPbcVhKIzIo`
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here&#39;s my entry for the Flutter Clock Challenge ⏰<br><br>My horrible math 😅 + <a href="https://twitter.com/FlutterDev?ref_src=twsrc%5Etfw">@FlutterDev</a> 🤘 = Particle Clock running in 120+ FPS 🚀<br><br>It shifts in sync with time &amp; randomly selects color palettes while still maintaining legibility. 🎨<a href="https://twitter.com/hashtag/FlutterClock?src=hash&amp;ref_src=twsrc%5Etfw">#FlutterClock</a> <a href="https://twitter.com/hashtag/Flutter?src=hash&amp;ref_src=twsrc%5Etfw">#Flutter</a> <a href="https://twitter.com/hashtag/flutterdev?src=hash&amp;ref_src=twsrc%5Etfw">#flutterdev</a> <a href="https://t.co/MRh7IW2cXX">pic.twitter.com/MRh7IW2cXX</a></p>&mdash; Mickel (@Miickel) <a href="https://twitter.com/Miickel/status/1219311659984080897?ref_src=twsrc%5Etfw">January 20, 2020</a></blockquote>
-
-This project is licensed under MIT, and fully open source.
+This open source project is licensed under MIT.

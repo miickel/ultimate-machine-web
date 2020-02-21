@@ -4,11 +4,12 @@ title: I Quit My CTO Job to Work on My Own (Non-Existing) Projects
 description: This is the first post.
 date: 2020-02-13T10:46:39.888Z
 isFeatured: false
-featuredImage: /img/IMG_1475 (1).jpg
+featuredImage: '/img/IMG_1475 (1).jpg'
 tags:
   - Career
   - Entrepreneurship
   - Indie Hacking
+  - Ultimate Machine
 ---
 
 For the past five and a half years I've been working as CTO of a startup. We worked to digitize the personal development space, intending to improve people's well-being. Think Tony Robbins, BJ Fogg, James Clear, meditation CDs and such, all re-packaged into apps for the modern consumer. Throughout the years our positioning changed, but what remained was the focus on goal achievement and life balance. I love the company and all the people working there. We achieved great things during our time together. But lately, I've had this growing itch to go do something on my own, and now it's outgrown my reasons to stay.
@@ -43,4 +44,4 @@ The first thing in March will be to spend some time on [tayl.app](https://www.ta
 
 This year I'm running every day. The goal is to run 5km (3.11 miles) daily on average. It's a great way for me to build grit and mental resilience, which will help in my other endeavors. Since January 1st, I've run 317 km (~6 km daily average). My shoes have traveled through 2 storms and Sweden's rainy winter, and are already due for a change.
 
-Subscribe to my newsletter and this blog (RSS), and [follow me on Twitter](https://twitter.com/miickel) if you want to see me mix the same level of grit with a furious shipping cadence to building great products and services.
+Subscribe to my <a href="/newsletter">newsletter</a> below, and [follow me on Twitter](https://twitter.com/miickel) if you want to see me mix the same level of grit with a furious shipping cadence to building great products and services.

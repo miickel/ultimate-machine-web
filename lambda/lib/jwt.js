@@ -3,7 +3,7 @@ const {JWT_SECRET} = process.env
 
 function sign(payload) {
   return jwt.sign(payload, JWT_SECRET, {
-    expiresIn: '5 minutes',
+    expiresIn: '2 days',
   })
 }
 

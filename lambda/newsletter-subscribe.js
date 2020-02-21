@@ -1,6 +1,9 @@
 const {validate} = require('email-validator')
 const {getSheet} = require('./lib/sheets.js')
 const {sign} = require('./lib/jwt.js')
+const {sendTemplatedEmail} = require('./lib/ses.js')
+
+const {NETLIFY_FUNCTIONS_ROOT} = process.env
 
 exports.handler = async (event, context) => {
   const {email} = event.queryStringParameters
@@ -8,7 +11,20 @@ exports.handler = async (event, context) => {
   try {
     if (!validate(email)) throw 'invalid'
 
-    await subscribe(email)
+    const secret = await subscribe(email)
+
+    await sendTemplatedEmail({
+      email,
+      template: 'verify-email',
+      templateData: {
+        verifyUrl: `${NETLIFY_FUNCTIONS_ROOT}/newsletter-confirm?secret=${encodeURI(
+          secret
+        )}`,
+        unsubscribeUrl: `${NETLIFY_FUNCTIONS_ROOT}/newsletter-unsubscribe?email=${encodeURI(
+          email
+        )}`,
+      },
+    })
 
     return {
       statusCode: 200,
@@ -39,4 +55,6 @@ async function subscribe(email) {
     secret,
     createdAt: new Date(),
   })
+
+  return secret
 }

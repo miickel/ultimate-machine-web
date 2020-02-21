@@ -16,9 +16,9 @@
           </p>
           <p>
             You need to
-            <a href="{{verifyUrl}}">verify your e-mail address</a> to activate.
+            <a href="{{verifyUrl}}">verify your e-mail address</a> to activate
+            it.
           </p>
-          <p>Cute GIFs await those who do! 😍</p>
         </mj-text>
 
         <mj-include path="./master/signature.mjml" />

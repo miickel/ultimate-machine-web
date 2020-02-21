@@ -6,6 +6,7 @@ import Content from '../components/Content.js'
 import HTMLContent from '../components/HTMLContent.js'
 import TagList from '../components/TagList.js'
 import SEO from '../components/SEO.js'
+import InlineNewsletter from '../components/InlineNewsletter.js'
 
 export const BlogPostTemplate = ({
   title,
@@ -20,6 +21,7 @@ export const BlogPostTemplate = ({
       <SEO title={title} description={description} />
       <h1>{title}</h1>
       <PostContent content={content} />
+      <InlineNewsletter />
       <TagList tags={tags} linkFn={tag => `/tags/${kebabCase(tag)}`} />
     </section>
   )

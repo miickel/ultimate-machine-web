@@ -12,12 +12,16 @@ const NewsletterWelcome = () => {
       <img
         className="full-width"
         src="https://media.giphy.com/media/KI5JqBqOKCPjG/giphy.gif"
-        alt="Surprised cat"
+        alt="Flirty cat"
       />
       <p>
         You are now subscribed to the <Link to="/newsletter">newsletter</Link>{' '}
         and can expect to get the next one. I try to keep a fairly consistent
         schedule of at least one e-mail a month.
+      </p>
+      <p>
+        If you can't wait to read something, check out the{' '}
+        <Link to="/newsletter/archive">newsletter archive</Link>.
       </p>
       <p>Talk to you soon!</p>
     </Layout>

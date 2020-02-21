@@ -23,7 +23,7 @@ Human peak performance and health, in general, is also a big interest of mine. F
 
 I dabble in trading in the stock market a bit. The markets themselves are not that interesting to me. What intrigues me is the challenge of it (it's very hard to make it as a trader), and that you can win with statistics. Plus the immediate feedback makes it a quick and process-focused experience. I won't write much about it, though. I've tried once before, but it only ended up with lots of people asking me for stock tips.
 
-## Open Source
+## Open-Source
 
 This website is Open-Source in its entirety. I'm open to pull requests of any size -- small and large. If you find issues with my spelling or grammar, open an issue on GitHub and I'll fix it. You can also submit a pull request and fix it yourself if you prefer. Same with UX or design bugs. I'm open to edits, translations and such but not new content. In the end, this is my personal website, you know!
 

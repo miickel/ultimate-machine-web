@@ -10,7 +10,7 @@ tags:
   - Flutter
   - Dart
   - Generative Art
-  - Open Source
+  - 'Open-Source'
   - Programming
 ---
 
@@ -30,4 +30,4 @@ Having only worked with Flutter once or twice before, this was a great opportuni
 
 ![Flutter particle clock](/img/flutter-clock/particle-clock-render-layers.png)
 
-This open source project is licensed under MIT.
+This open-source project is licensed under MIT.

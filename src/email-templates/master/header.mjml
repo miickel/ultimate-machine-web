@@ -1,0 +1,16 @@
+<mj-section background-color="#ffffff" padding-bottom="0">
+  <mj-group>
+    <mj-column>
+      <mj-image
+        align="left"
+        width="22px"
+        src="https://res.cloudinary.com/ultimatemachine/image/upload/c_scale,h_44/v1582207419/Ultimate%20Machine/ultimate-machine-logo-icon-trimmed_j9vwmx.png"
+        alt=""
+      />
+    </mj-column>
+    <mj-column>
+      <mj-text mj-class="text small" align="right" padding-top="15px">
+      </mj-text>
+    </mj-column>
+  </mj-group>
+</mj-section>

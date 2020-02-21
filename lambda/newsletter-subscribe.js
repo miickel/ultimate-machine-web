@@ -44,7 +44,10 @@ async function subscribe(email) {
   const rows = await sheet.getRows()
   const existing = rows.find(row => row.email === email)
 
-  if (existing) throw 'exists'
+  if (existing) {
+    if (existing.confirmedAt) throw 'exists'
+    await existing.delete()
+  }
 
   const secret = sign({
     email,
@@ -53,7 +56,7 @@ async function subscribe(email) {
   await sheet.addRow({
     email,
     secret,
-    createdAt: new Date(),
+    createdAt: new Date().getTime(),
   })
 
   return secret

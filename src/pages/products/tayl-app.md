@@ -1,6 +1,6 @@
 ---
 template: Product
-title: TAYL - Talk at You Later
+title: TAYL — Talk at You Later
 description: Turn your reading list into a Podcast playlist.
 url: https://www.tayl.app
 startDate: 2019-03-01T00:00:00.000Z
@@ -21,7 +21,7 @@ Save your text content using our premium browser extensions, smartphone apps for
 
 ![tayl.app - Websites to podcast](/img/tayl-app-desktop.png)
 
-## Worldwide Opportunity for Growth
+## Global Features -- Global Growth Potential
 
 The underlying platform supports more than 30 different languages. Users can select from a huge variety of over 200 voices. This product scales easily and has very good growth potential.
 

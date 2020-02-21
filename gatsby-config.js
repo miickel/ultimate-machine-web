@@ -11,6 +11,12 @@ module.exports = {
     `gatsby-plugin-twitter`,
     `gatsby-plugin-catch-links`,
     {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-158821676-1',
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,

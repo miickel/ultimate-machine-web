@@ -8,7 +8,15 @@ exports.handler = async (event, context) => {
   try {
     const sheet = await getSheet()
     const rows = await sheet.getRows()
-    const row = rows.find(row => row.email === email)
+    const row = rows.find(row => row.email === email && !row.unsubscribedAt)
+
+    if (!row) {
+      return {
+        statusCode: 200,
+        body: 'You are already unsubscribed.',
+      }
+    }
+
     row.unsubscribedAt = new Date().getTime()
     await row.save()
 

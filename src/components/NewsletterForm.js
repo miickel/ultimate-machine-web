@@ -27,11 +27,18 @@ const NewsletterForm = () => {
 
   if (state === states.submitted)
     return (
-      <p>
-        <strong>Almost there!</strong> Now, please click the link in the
-        verification e-mail sent to you to confirm your subscription. The link
-        expires in 2 days from now.
-      </p>
+      <div>
+        <p>
+          <strong>Check your email!</strong> ✉️ 👀
+          <br />
+          Click the link in the email sent to you to{' '}
+          <strong>confirm your subscription</strong>.<br />
+          The link expires in 2 days from now.
+        </p>
+        <p>
+          <strong>Psst!</strong> Also check your Spam folder, just in case! ✅
+        </p>
+      </div>
     )
 
   return (

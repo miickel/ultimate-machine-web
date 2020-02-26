@@ -2,7 +2,7 @@
   "name": "ultimate-machine-landing",
   "private": true,
   "description": "Ultimate Machine web site.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Mickel Andersson <mickel@ultimatemachine.se>",
   "dependencies": {
     "aws-sdk": "^2.623.0",
@@ -13,6 +13,7 @@
     "gatsby-background-image": "^0.9.14",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-catch-links": "^2.1.25",
+    "gatsby-plugin-feed": "^2.3.27",
     "gatsby-plugin-google-analytics": "^2.1.35",
     "gatsby-plugin-manifest": "^2.2.40",
     "gatsby-plugin-netlify": "^2.1.31",

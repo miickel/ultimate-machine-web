@@ -3,6 +3,7 @@ module.exports = {
     title: `Ultimate Machine`,
     description: `Personal blog by Mickel Andersson.`,
     author: `@miickel`,
+    siteUrl: `https://ultimatemachine.se`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,6 +11,39 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-twitter`,
     `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            title: 'Ultimate Machine | Articles',
+            output: '/rss.xml',
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: {order: DESC, fields: [frontmatter___date]}
+                  filter: {frontmatter: {template: {eq: "BlogPost"}}}
+                ) {
+                  edges {
+                    node {
+                      excerpt(pruneLength: 400)
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {

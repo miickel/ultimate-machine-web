@@ -17,7 +17,7 @@ module.exports = {
         feeds: [
           {
             title: 'Ultimate Machine | Articles',
-            output: '/rss.xml',
+            output: '/articles.xml',
             query: `
               {
                 allMarkdownRemark(

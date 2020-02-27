@@ -1,7 +1,7 @@
 ---
 template: Product
 title: Flutter Particle Clock
-description: The winning entry to the Flutter Clock Challenge competition.
+description: The grand prize-winning entry of Google's Flutter Clock competition.
 url: https://github.com/miickel/flutter_particle_clock
 startDate: 2020-02-05T00:00:00.000Z
 featuredImage: /img/flutter-particle-clock.png

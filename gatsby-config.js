@@ -18,6 +18,7 @@ module.exports = {
           {
             title: 'Ultimate Machine | Articles',
             output: '/articles.xml',
+            serialize: serializeRssItems,
             query: `
               {
                 allMarkdownRemark(
@@ -26,14 +27,41 @@ module.exports = {
                 ) {
                   edges {
                     node {
-                      excerpt(pruneLength: 400)
                       html
                       fields {
                         slug
                       }
                       frontmatter {
                         title
+                        description
                         date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+          },
+          {
+            title: 'Ultimate Machine | Products',
+            output: '/products.xml',
+            serialize: serializeRssItems,
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: {order: DESC, fields: [frontmatter___startDate]}
+                  filter: {frontmatter: {template: {eq: "Product"}}}
+                ) {
+                  edges {
+                    node {
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        description
+                        date: startDate
                       }
                     }
                   }
@@ -164,4 +192,17 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+}
+
+function serializeRssItems({query: {site, allMarkdownRemark}}) {
+  return allMarkdownRemark.edges.map(({node}) => ({
+    ...node.frontmatter,
+    url: site.siteMetadata.siteUrl + node.fields.slug,
+    guid: site.siteMetadata.siteUrl + node.fields.slug,
+    custom_elements: [
+      {
+        'content:encoded': node.html,
+      },
+    ],
+  }))
 }

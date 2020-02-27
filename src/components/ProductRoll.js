@@ -2,9 +2,9 @@ import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 import {BlogRollTemplate} from './BlogRoll.js'
 
-const ArticleRoll = ({limit}) => {
+const ProductRoll = ({limit}) => {
   const data = useStaticQuery(graphql`
-    query ArticleRollQuery {
+    query ProductRollQuery {
       allMarkdownRemark(
         sort: {order: DESC, fields: [frontmatter___startDate]}
         filter: {frontmatter: {template: {eq: "Product"}}}
@@ -41,4 +41,4 @@ const ArticleRoll = ({limit}) => {
   return <BlogRollTemplate posts={posts} limit={limit} />
 }
 
-export default ArticleRoll
+export default ProductRoll

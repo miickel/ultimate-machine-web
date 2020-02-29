@@ -5,6 +5,9 @@ description: Turn your reading list into a Podcast playlist.
 url: https://www.tayl.app
 startDate: 2019-03-01T00:00:00.000Z
 featuredImage: /img/tayl-app-desktop.png
+colors:
+  - '#F5EBE6'
+  - '#4B4646'
 tags:
   - B2C
   - SaaS

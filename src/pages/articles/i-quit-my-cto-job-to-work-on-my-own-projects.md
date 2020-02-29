@@ -1,7 +1,7 @@
 ---
 template: BlogPost
 title: I Quit My CTO Job to Work on My Own Projects
-description: This is the first post.
+description: A post about leaving the safety of a steady salary behind to become the sole founder of a software company.
 date: 2020-02-13T10:46:39.888Z
 isFeatured: false
 featuredImage: '/img/ultimate-machine-icon-reversed.png'

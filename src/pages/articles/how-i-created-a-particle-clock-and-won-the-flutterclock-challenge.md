@@ -1,16 +1,19 @@
 ---
 template: BlogPost
-title: "How I Created a Particle Clock and Won the #FlutterClock Challenge"
+title: 'How I Created a Particle Clock and Won the #FlutterClock Challenge'
 description: Having only worked with Flutter once or twice before, this was a great opportunity for me to dive a bit deeper.
 date: 2020-02-25T10:46:39.888Z
 isFeatured: false
 featuredImage: /img/flutter-particle-clock.png
+colors:
+  - '#F6EDB7'
+  - '#24182C'
 tags:
   - FlutterClock
   - Flutter
   - Dart
   - Generative Art
-  - "Open-Source"
+  - 'Open-Source'
   - Programming
 ---
 
@@ -231,7 +234,7 @@ Flutter is great for this sort of stuff. Creativity calls for experimentation, a
 
 `youtube: https://youtu.be/VPbcVhKIzIo`
 
-Martin Aguinis, Global Marketing Lead Flutter for Google, [tweeted out](https://twitter.com/martinaguinis/status/1231707789740969987?s=21) that they received **850 unique submissions across 86 different countries**. Out of all those, the jury of Google experts picked my entry for the **Grand Prize** (a loaded Apple iMac Pro valued at approximately $10,000). I have never considered myself a good programmer, so when Martin reached out to me my surprise was real! I still can't believe I've won.
+Martin Aguinis, Global Marketing Lead Flutter for Google, [tweeted out](https://twitter.com/martinaguinis/status/1231707789740969987?s=21) that they received **850 unique submissions across 86 different countries**. Out of all those, the jury of Google experts picked my entry for the **Grand Prize** (a loaded Apple iMac Pro valued at approximately \$10,000). I have never considered myself a good programmer, so when Martin reached out to me my surprise was real! I still can't believe I've won.
 
 Thanks to Google and the Flutter team for making this challenge happen, and thanks to all of you who cheered me on and [showed your support on Twitter](https://twitter.com/miickel/status/1219311659984080897?s=21)!
 

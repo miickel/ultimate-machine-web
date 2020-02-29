@@ -1,7 +1,23 @@
 const _ = require('lodash')
 const path = require('path')
+const puppeteer = require('puppeteer')
+const fs = require('fs-extra')
 const {createFilePath} = require('gatsby-source-filesystem')
+const {createFileNode} = require('gatsby-source-filesystem/create-file-node')
 const {fmImagesToRelative} = require('gatsby-remark-relative-images')
+const renderImageFromHtml = require('./scripts/renderImageFromHtml.js')
+
+let browser = null
+
+exports.onPreInit = async () => {
+  browser = await puppeteer.launch({
+    headless: true,
+  })
+}
+
+exports.onPostBuild = async () => {
+  await browser.close()
+}
 
 exports.createPages = ({actions, graphql}) => {
   const {createPage} = actions
@@ -69,11 +85,59 @@ exports.createPages = ({actions, graphql}) => {
   })
 }
 
-exports.onCreateNode = ({node, actions, getNode}) => {
-  const {createNodeField} = actions
+exports.onCreateNode = async ({
+  node,
+  actions,
+  getNode,
+  createNodeId,
+  store,
+  cache,
+}) => {
+  const {createNodeField, createNode} = actions
+  const {program} = store.getState()
+
+  const CACHE_DIR = path.resolve(`${program.directory}/.cache/social`)
+  await fs.ensureDir(CACHE_DIR)
+
   fmImagesToRelative(node)
 
   if (node.internal.type === `MarkdownRemark`) {
+    const {title, description, featuredImage, colors} = node.frontmatter
+
+    if (featuredImage) {
+      try {
+        const ogImage = await renderImageFromHtml({
+          cacheDir: CACHE_DIR,
+          browser,
+          title,
+          description,
+          featuredImage: getBase64Image(
+            path.join(program.directory, featuredImage.replace('../../../', ''))
+          ),
+          templatePath: path.join(
+            program.directory,
+            'html-templates/social-card/index.html'
+          ),
+          colors,
+        })
+
+        const ogImageNode = await createGatsbySourceFilesystemNode({
+          path: ogImage,
+          createNode,
+          createNodeId,
+          parentNodeId: node.id,
+        })
+
+        createNodeField({
+          name: `socialImage___NODE`,
+          node,
+          value: ogImageNode.id,
+        })
+      } catch (err) {
+        console.error(err)
+      }
+    }
+
     const value = createFilePath({node, getNode})
     createNodeField({
       name: `slug`,
@@ -81,4 +145,25 @@ exports.onCreateNode = ({node, actions, getNode}) => {
       value,
     })
   }
+}
+
+async function createGatsbySourceFilesystemNode({
+  path,
+  createNode,
+  createNodeId,
+  parentNodeId,
+}) {
+  const fileNode = await createFileNode(path, createNodeId)
+  fileNode.parent = parentNodeId
+  createNode(fileNode, {
+    name: 'gatsby-source-filesystem',
+  })
+  return fileNode
+}
+
+function getBase64Image(file) {
+  const bitmap = fs.readFileSync(file)
+  const buffer = Buffer.from(bitmap).toString('base64')
+  const ext = path.extname(file).substr(1)
+  return `data:image/${ext};base64,${buffer}`
 }

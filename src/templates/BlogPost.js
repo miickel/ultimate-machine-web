@@ -14,11 +14,12 @@ export const BlogPostTemplate = ({
   tags = [],
   content,
   contentComponent,
+  socialImage,
 }) => {
   const PostContent = contentComponent || Content
   return (
     <section>
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} socialImage={socialImage} />
       <h1>{title}</h1>
       <PostContent content={content} />
       <InlineNewsletter />
@@ -30,6 +31,7 @@ export const BlogPostTemplate = ({
 const BlogPost = ({data}) => {
   const {markdownRemark: post} = data
   const {title, description, tags} = post.frontmatter
+  const {socialImage} = post.fields
 
   return (
     <Layout>
@@ -39,6 +41,7 @@ const BlogPost = ({data}) => {
         tags={tags}
         content={post.html}
         contentComponent={HTMLContent}
+        socialImage={socialImage}
       />
     </Layout>
   )
@@ -56,6 +59,17 @@ export const pageQuery = graphql`
         title
         description
         tags
+      }
+      fields {
+        socialImage {
+          childImageSharp {
+            fluid(maxWidth: 1600, quality: 90) {
+              src
+              presentationWidth
+              presentationHeight
+            }
+          }
+        }
       }
     }
   }

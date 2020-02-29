@@ -5,6 +5,9 @@ description: A thought organizer combining an outliner with mindmaps and a notep
 url: https://mindnite.com
 startDate: 2017-12-01T00:00:00.000Z
 featuredImage: /img/mindnite-app.png
+colors:
+  - '#071E4E'
+  - '#BFD1F4'
 tags:
   - B2C
   - SaaS

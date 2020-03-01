@@ -133,6 +133,14 @@ function SEO({
       name: 'twitter:creator',
       content: site.siteMetadata.authorTwitter,
     },
+    {
+      name: 'twitter:title',
+      content: title,
+    },
+    {
+      name: 'twitter:description',
+      content: metaDescription,
+    },
 
     // Extras
     ...ogMeta,

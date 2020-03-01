@@ -55,6 +55,10 @@ function SEO({
         property: 'og:image:height',
         content: socialImage.childImageSharp.fluid.presentationHeight,
       },
+      {
+        name: 'twitter:image',
+        content: `${site.siteMetadata.siteUrl}${socialImage.childImageSharp.fluid.src}`,
+      },
     ]
   }
 

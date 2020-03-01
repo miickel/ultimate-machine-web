@@ -44,55 +44,54 @@ function SEO({
 
   const metaDescription = description || site.siteMetadata.description
 
-  const ogMeta = socialImage
-    ? [
-        {
-          name: 'og:image',
-          content: `${site.siteMetadata.siteUrl}${socialImage.childImageSharp.fluid.src}`,
-        },
-        {
-          name: 'og:image:width',
-          content: socialImage.childImageSharp.fluid.presentationWidth,
-        },
-        {
-          name: 'og:image:height',
-          content: socialImage.childImageSharp.fluid.presentationHeight,
-        },
-        {
-          name: 'image',
-          content: `${site.siteMetadata.siteUrl}${socialImage.childImageSharp.fluid.src}`,
-        },
-      ]
-    : []
+  let ogMeta = []
+
+  if (socialImage) {
+    ogMeta = [
+      {
+        name: 'image',
+        property: 'og:image',
+        content: `${site.siteMetadata.siteUrl}${socialImage.childImageSharp.fluid.src}`,
+      },
+      {
+        property: 'og:image:width',
+        content: socialImage.childImageSharp.fluid.presentationWidth,
+      },
+      {
+        property: 'og:image:height',
+        content: socialImage.childImageSharp.fluid.presentationHeight,
+      },
+    ]
+  }
 
   let ogAuthor = []
 
   if (type === 'article') {
     ogAuthor = [
       {
-        name: 'article:publisher',
+        property: 'article:publisher',
         content: site.siteMetadata.siteUrl,
       },
       {
-        name: 'article:author',
+        property: 'article:author',
         content: site.siteMetadata.authorUrl,
       },
       {
-        name: 'article:published_time',
+        property: 'article:published_time',
         content: publishDate,
       },
       {
-        name: 'article:modified_time',
+        property: 'article:modified_time',
         content: site.buildTime,
       },
       ...tags.map(tag => ({
-        name: 'article:tag',
+        property: 'article:tag',
         content: tag,
       })),
     ]
     if (tags.length !== 0) {
       ogAuthor.push({
-        name: 'article:section',
+        property: 'article:section',
         content: tags[tags.length - 1],
       })
     }
@@ -101,6 +100,7 @@ function SEO({
   const metaTags = [
     {
       name: 'description',
+      property: 'og:description',
       content: metaDescription,
     },
     {
@@ -116,10 +116,6 @@ function SEO({
     {
       property: 'og:title',
       content: title,
-    },
-    {
-      property: 'og:description',
-      content: metaDescription,
     },
     {
       property: 'og:site_name',

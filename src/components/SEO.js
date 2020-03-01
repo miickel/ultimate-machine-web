@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import {useStaticQuery, graphql} from 'gatsby'
+import {globalHistory} from '@reach/router'
 
 function SEO({
   description = '',
@@ -13,14 +14,6 @@ function SEO({
   publishDate,
   tags = [],
 }) {
-  const [fallbackPathname, setFallbackPathname] = useState()
-
-  useEffect(() => {
-    if (!pathname) {
-      setFallbackPathname(window.location.pathname)
-    }
-  }, [pathname])
-
   const {site} = useStaticQuery(
     graphql`
       query {
@@ -39,8 +32,9 @@ function SEO({
     `
   )
 
-  const canonicalUrl = `${site.siteMetadata.siteUrl}${pathname ||
-    fallbackPathname}`
+  const canonicalUrl = `${site.siteMetadata.siteUrl}${
+    pathname ? pathname : globalHistory.location.pathname
+  }`
 
   const metaDescription = description || site.siteMetadata.description
 

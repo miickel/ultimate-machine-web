@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Ultimate Machine`,
-    description: `Personal blog by Mickel Andersson.`,
-    author: `@miickel`,
-    siteUrl: `https://ultimatemachine.se`,
+    title: 'Ultimate Machine',
+    description: 'Personal blog by Mickel Andersson.',
+    authorName: 'Mickel Andersson',
+    authorTwitter: '@miickel',
+    authorUrl: 'https://twitter.com/miickel',
+    siteUrl: 'https://ultimatemachine.se',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

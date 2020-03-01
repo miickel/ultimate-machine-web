@@ -15,11 +15,21 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   socialImage,
+  slug,
+  publishDate = Date(),
 }) => {
   const PostContent = contentComponent || Content
   return (
     <section>
-      <SEO title={title} description={description} socialImage={socialImage} />
+      <SEO
+        title={title}
+        description={description}
+        socialImage={socialImage}
+        type="article"
+        pathname={slug}
+        publishDate={publishDate}
+        tags={tags}
+      />
       <h1>{title}</h1>
       <PostContent content={content} />
       <InlineNewsletter />
@@ -30,8 +40,8 @@ export const BlogPostTemplate = ({
 
 const BlogPost = ({data}) => {
   const {markdownRemark: post} = data
-  const {title, description, tags} = post.frontmatter
-  const {socialImage} = post.fields
+  const {title, description, tags, publishDate} = post.frontmatter
+  const {slug, socialImage} = post.fields
 
   return (
     <Layout>
@@ -42,6 +52,8 @@ const BlogPost = ({data}) => {
         content={post.html}
         contentComponent={HTMLContent}
         socialImage={socialImage}
+        slug={slug}
+        publishDate={publishDate}
       />
     </Layout>
   )
@@ -55,12 +67,13 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        publishDate: date
         title
         description
         tags
       }
       fields {
+        slug
         socialImage {
           childImageSharp {
             fluid(maxWidth: 1600, quality: 90) {

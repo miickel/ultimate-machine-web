@@ -6,10 +6,10 @@ date: 2020-02-13T10:46:39.888Z
 isFeatured: false
 featuredImage: '/img/ultimate-machine-icon-reversed.png'
 tags:
+  - Ultimate Machine
+  - Indie Hacking
   - Career
   - Entrepreneurship
-  - Indie Hacking
-  - Ultimate Machine
 ---
 
 For the past five and a half years I've been working as CTO of a startup. We worked to digitize the personal development space, intending to improve people's well-being. Think Tony Robbins, BJ Fogg, James Clear, meditation CDs and such, all re-packaged into apps for the modern consumer. Throughout the years our positioning changed, but what remained was the focus on goal achievement and life balance. I love the company and all the people working there. We achieved great things during our time together. But lately, I've had this growing itch to go do something on my own, and now it's outgrown my reasons to stay.

@@ -17,11 +17,17 @@ export const ProductTemplate = ({
   content,
   contentComponent,
   socialImage,
+  slug,
 }) => {
   const PostContent = contentComponent || Content
   return (
     <section>
-      <SEO title={title} description={description} socialImage={socialImage} />
+      <SEO
+        title={title}
+        description={description}
+        socialImage={socialImage}
+        pathname={slug}
+      />
       <h1>{title}</h1>
       <PostContent content={content} />
       <InlineNewsletter />
@@ -38,7 +44,7 @@ export const ProductTemplate = ({
 const Product = ({data}) => {
   const {markdownRemark: post} = data
   const {title, description, tags, url} = post.frontmatter
-  const {socialImage} = post.fields
+  const {slug, socialImage} = post.fields
 
   return (
     <Layout>
@@ -50,6 +56,7 @@ const Product = ({data}) => {
         content={post.html}
         contentComponent={HTMLContent}
         socialImage={socialImage}
+        slug={slug}
       />
     </Layout>
   )
@@ -70,6 +77,7 @@ export const pageQuery = graphql`
         url
       }
       fields {
+        slug
         socialImage {
           childImageSharp {
             fluid(maxWidth: 1600, quality: 90) {

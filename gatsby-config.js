@@ -7,6 +7,7 @@ module.exports = {
     authorUrl: 'https://twitter.com/miickel',
     siteUrl: 'https://ultimatemachine.se',
   },
+  assetPrefix: 'https://cdn.ultimatemachine.se',
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,

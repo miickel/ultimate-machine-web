@@ -7,13 +7,23 @@ module.exports = {
     authorUrl: 'https://twitter.com/miickel',
     siteUrl: 'https://ultimatemachine.se',
   },
-  assetPrefix: 'https://cdn.ultimatemachine.se',
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-twitter`,
     `gatsby-plugin-catch-links`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: [
+          '/admin',
+          '/newsletter/welcome',
+          '/newsletter/expired',
+          '/newsletter/unsubscribed',
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {

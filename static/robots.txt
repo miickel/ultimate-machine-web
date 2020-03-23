@@ -1,0 +1,7 @@
+Sitemap: https://ultimatemachine.se/sitemap.xml
+
+User-agent: *
+Disallow: /admin/
+Disallow: /newsletter/welcome
+Disallow: /newsletter/expired
+Disallow: /newsletter/unsubscribed

@@ -14,6 +14,17 @@ module.exports = {
     `gatsby-plugin-twitter`,
     `gatsby-plugin-catch-links`,
     {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: [
+          '/admin',
+          '/newsletter/welcome',
+          '/newsletter/expired',
+          '/newsletter/unsubscribed',
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         feeds: [

@@ -45,7 +45,7 @@ function SEO({
       {
         name: 'image',
         property: 'og:image',
-        content: `${socialImage.childImageSharp.fluid.src}`,
+        content: `${site.siteMetadata.siteUrl}${socialImage.childImageSharp.fluid.src}`,
       },
       {
         property: 'og:image:width',
@@ -57,7 +57,7 @@ function SEO({
       },
       {
         name: 'twitter:image',
-        content: `${socialImage.childImageSharp.fluid.src}`,
+        content: `${site.siteMetadata.siteUrl}${socialImage.childImageSharp.fluid.src}`,
       },
     ]
   }

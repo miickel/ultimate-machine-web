@@ -36,6 +36,10 @@ const NewsletterForm = () => {
           The link expires in 2 days from now.
         </p>
         <p>
+          <strong>Fun fact:</strong> Roughly 47% who submitted their email did
+          not verify. Will you?
+        </p>
+        <p>
           <strong>Psst!</strong> Also check your Spam folder, just in case! ✅
         </p>
       </div>
@@ -44,7 +48,11 @@ const NewsletterForm = () => {
   return (
     <>
       <p>
-        Get my <strong>best content</strong> by email.
+        Get my <strong>best content</strong> by email. Emails are sent out{' '}
+        <strong>once a month</strong> on average. Your email address is{' '}
+        <strong>safe</strong> and{' '}
+        <strong>will not be shared with 3rd parties</strong>. Reply to any
+        sendout to <strong>get in touch with me</strong>.
       </p>
       <form onSubmit={handleSubmit}>
         <fieldset disabled={state === states.submitting}>
@@ -67,6 +75,7 @@ const NewsletterForm = () => {
           </div>
         </fieldset>
       </form>
+      <p>Unsubscribe anytime. 🙅‍♀️</p>
     </>
   )
 }

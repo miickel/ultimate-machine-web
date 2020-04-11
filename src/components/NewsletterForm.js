@@ -10,7 +10,7 @@ const states = {
 
 const NewsletterForm = () => {
   const [email, setEmail] = useState('')
-  const [state, setState] = useState(states.submitted)
+  const [state, setState] = useState(states.idle)
 
   const handleSubmit = async e => {
     e.preventDefault()

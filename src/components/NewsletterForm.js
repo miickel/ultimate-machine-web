@@ -10,7 +10,7 @@ const states = {
 
 const NewsletterForm = () => {
   const [email, setEmail] = useState('')
-  const [state, setState] = useState(states.idle)
+  const [state, setState] = useState(states.submitted)
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -29,7 +29,13 @@ const NewsletterForm = () => {
     return (
       <div>
         <p>
-          <strong>Check your email!</strong> ✉️ 👀
+          <strong>Check your email!</strong>{' '}
+          <span role="img" aria-label="E-mail letter">
+            ✉️
+          </span>{' '}
+          <span role="img" aria-label="Eyes looking at letter">
+            👀
+          </span>
           <br />
           Click the link in the email sent to you to{' '}
           <strong>confirm your subscription</strong>.<br />
@@ -40,7 +46,10 @@ const NewsletterForm = () => {
           not verify. Will you?
         </p>
         <p>
-          <strong>Psst!</strong> Also check your Spam folder, just in case! ✅
+          <strong>Psst!</strong> Also check your Spam folder, just in case!{' '}
+          <span role="img" aria-label="Checkmark">
+            ✅
+          </span>
         </p>
       </div>
     )
@@ -75,7 +84,12 @@ const NewsletterForm = () => {
           </div>
         </fieldset>
       </form>
-      <p>Unsubscribe anytime. 🙅‍♀️</p>
+      <p>
+        Unsubscribe anytime.{' '}
+        <span role="img" aria-label="">
+          🙅‍♀️
+        </span>
+      </p>
     </>
   )
 }

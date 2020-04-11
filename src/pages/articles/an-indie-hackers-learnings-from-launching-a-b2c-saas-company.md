@@ -1,7 +1,7 @@
 ---
 template: BlogPost
 title: An Indie Hacker’s Learnings From Launching a B2C SaaS Company
-description: A post about leaving the safety of a steady salary behind to become the sole founder of a software company.
+description: A look back at the past year for TAYL — From MVP to launch, numbers, earnings and learnings.
 date: 2020-04-11T10:46:39.888Z
 isFeatured: false
 featuredImage: /img/tayl-2019-review/tayl-logo-cover.png

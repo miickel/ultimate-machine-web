@@ -2,7 +2,7 @@
   "name": "ultimate-machine-landing",
   "private": true,
   "description": "Ultimate Machine web site.",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "author": "Mickel Andersson <mickel@ultimatemachine.se>",
   "dependencies": {
     "aws-sdk": "^2.623.0",
@@ -42,6 +42,7 @@
     "gatsby-transformer-sharp": "^2.3.13",
     "glob": "^7.1.6",
     "google-spreadsheet": "^3.0.8",
+    "got": "^10.7.0",
     "intersection-observer": "^0.7.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",

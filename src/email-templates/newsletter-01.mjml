@@ -1,0 +1,134 @@
+<mjml>
+  <mj-head>
+    <mj-include path="./master/variables.mjml" />
+  </mj-head>
+
+  <mj-body background-color="#ffffff">
+    <mj-include path="./master/header.mjml" />
+
+    <mj-section background-color="#ffffff">
+      <mj-column>
+        <mj-text mj-class="text">
+          <p>Hi there,</p>
+          <p>
+            I hope you are doing well and keeping safe.
+          </p>
+          <p>
+            A while back you signed up for the
+            <a href="https://ultimatemachine.se/newsletter"
+              >Ultimate Machine Newsletter</a
+            >, previously <a href="https://tayl.app">TAYL Newsletter</a>. This
+            is the first edition. Feel free to unsubscribe if you're no longer
+            interested in receiving these emails (1 per month).
+          </p>
+          <p>
+            The format of these emails is still a work in progress. Please
+            <strong>share your feedback</strong> with me by
+            <strong>replying to this email</strong>.
+          </p>
+
+          <h3>One clever idea 💡</h3>
+          <blockquote>
+            The Pygmalion effect, or Rosenthal effect, is the phenomenon whereby
+            higher expectations lead to an increase in performance. The effect
+            is named after the Greek myth of Pygmalion, a sculptor who fell in
+            love with a statue he had carved, or alternately, after the
+            Rosenthal–Jacobson study.
+          </blockquote>
+          <p>
+            Do you like this? —
+            <a href="https://ctt.ac/UlMLc">Share it with one click</a>
+          </p>
+          <h3>One thoughtful quote 🤔</h3>
+          <blockquote>
+            “Depression is the inability to construct a future.” - Rollo May
+          </blockquote>
+          <p>
+            Do you like this? —
+            <a href="https://ctt.ac/0t27r">Share it with one click</a>
+          </p>
+
+          <h3>Updates from me 🚀</h3>
+          <p>
+            These are some extraordinary times. Never before have we seen this
+            level of <strong>unprecedented focus</strong> and
+            <strong>world-wide collaboration</strong> to solve the same problem.
+            Disasters and crises bring out the best in us. Yet, every day we are
+            bombarded with only bad news regarding COVID-19. There's a saying
+            that “Bad news travels fast”. A growing body of evidence illustrates
+            that
+            <strong>we pay more attention to negative news than positive</strong
+            >. Today's media fight hard for their survival and are very much
+            aware of this fact. In addition, the tendency to
+            <strong>share negative news on social media is stronger</strong>.
+            So, if the number of eyeballs is the success metric for media, then
+            there are some very compelling reasons for focusing on what's bad in
+            the world.
+          </p>
+          <p>
+            I've been laying low since the start of the crisis. My focus has
+            shifted temporarily from <strong>building SaaS products</strong> to
+            <strong>trading the markets</strong>. This truly historical event
+            moves the markets in ways never seen before. A daytrader at heart, I
+            want to experience it first-hand. 2 weeks in, and I'm already eager
+            to get back to only focusing on building products. Trading is more
+            stressful to me and not rewarding, in the same way, creating
+            something is.
+          </p>
+          <p>
+            Markets aside, I managed to actually get some things done the past
+            weeks:
+          </p>
+          <ul>
+            <li>
+              <strong>Blog:</strong>
+              <a
+                href="https://ultimatemachine.se/articles/an-indie-hackers-learnings-from-launching-a-b2c-saas-company/"
+                >An Indie Hacker’s Learnings From Launching a B2C SaaS
+                Company</a
+              >
+              — A look back at the first year since launching
+              <a href="https://tayl.app">TAYL</a>, and what I've learned along
+              the way. Please let me know what you think. You can help me out by
+              <a href="https://ctt.ac/ffdAw">sharing it on Twitter</a>.
+            </li>
+            <li>
+              <strong>TAYL:</strong> Save 30% with the new code
+              <code>UM_BLOG</code>.
+            </li>
+            <li>
+              <strong>Running:</strong> I've still managed to run every day
+              since January 1st and recently passed the 100-mark and closing in
+              on 600km (~373 miles). There'll be a blog post about this goal in
+              the future.
+            </li>
+            <li>
+              <strong>New project:</strong> Graphical profile, design of landing
+              page, onboarding and authentication flow is done. The next step is
+              building the admin panel and backend.
+            </li>
+            <li>
+              <strong>Misc:</strong> I somehow managed to win (!!!) Google's
+              Flutter Clock Challenge. It was a fun world-wide
+              design/programming competition with thousands of participants. You
+              can read more about it in my blog:
+              <a
+                href="https://ultimatemachine.se/articles/how-i-created-a-particle-clock-and-won-the-flutterclock-challenge"
+                >How I Created a Particle Clock and Won the #FlutterClock
+                Challenge</a
+              >.
+            </li>
+          </ul>
+
+          <p>
+            Thanks for your interest.
+          </p>
+        </mj-text>
+
+        <mj-include path="./master/signature.mjml" />
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./master/footer.mjml" />
+  </mj-body>
+</mjml>

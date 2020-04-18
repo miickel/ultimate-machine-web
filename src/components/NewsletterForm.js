@@ -10,14 +10,15 @@ const states = {
 
 const NewsletterForm = () => {
   const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
   const [state, setState] = useState(states.idle)
 
   const handleSubmit = async e => {
     e.preventDefault()
-    if (!email) return
+    if (!email || !name) return
     setState(states.submitting)
     try {
-      await newsletterSubscribe(email)
+      await newsletterSubscribe(email, name)
       setState(states.submitted)
     } catch (err) {
       alert(`Could not subscribe ${email}. Perhaps you are already subscribed?`)
@@ -70,26 +71,30 @@ const NewsletterForm = () => {
             <input
               type="email"
               value={email}
+              required
               onChange={e => setEmail(e.target.value)}
+            />
+          </label>
+          <label>
+            <span>First name</span>
+            <input
+              type="text"
+              value={name}
+              required
+              onChange={e => setName(e.target.value)}
             />
           </label>
           <div className="buttons">
             <SubmitButton
               type="submit"
               isSubmitting={state === states.submitting}
-              disabled={!Boolean(email)}
+              disabled={!Boolean(email) || !Boolean(name)}
             >
               Subscribe
             </SubmitButton>
           </div>
         </fieldset>
       </form>
-      <p>
-        Unsubscribe anytime.{' '}
-        <span role="img" aria-label="">
-          🙅‍♀️
-        </span>
-      </p>
     </>
   )
 }

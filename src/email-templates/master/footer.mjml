@@ -17,7 +17,7 @@
       Ultimate Machine
       <br />Gunn Wållgrens Gata 5 <br />412 49 Gothenburg, Sweden <br /><br /><a
         class="link--footer"
-        href="{{unsubscribeUrl}}"
+        href="{{ .UnsubscribeURL }}"
         >Unsubscribe</a
       >
     </mj-text>

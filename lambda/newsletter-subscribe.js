@@ -9,8 +9,6 @@ exports.handler = async (event, context) => {
   try {
     if (!validate(email) || !name) throw 'invalid'
 
-    console.log('posting...')
-
     const {body} = await got.post(`${LISTMONK_API_ROOT}/subscribers`, {
       json: {
         email,
@@ -19,8 +17,6 @@ exports.handler = async (event, context) => {
         lists: [3],
       },
     })
-
-    console.log(body)
 
     return {
       statusCode: 200,

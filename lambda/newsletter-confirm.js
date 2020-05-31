@@ -1,5 +1,5 @@
 const jwt = require('./lib/jwt.js')
-const {client, listConfirmSubscription} = require('./lib/db.js')
+const {listConfirmSubscription} = require('./lib/emailList.js')
 
 const {NEWSLETTER_WELCOME_URL, NEWSLETTER_EXPIRED_URL} = process.env
 
@@ -13,8 +13,6 @@ exports.handler = async (event, context) => {
     if (!isConfirmed) throw 'invalid'
   } catch (err) {
     Location = NEWSLETTER_EXPIRED_URL
-  } finally {
-    await client.end().catch(() => {})
   }
 
   return {

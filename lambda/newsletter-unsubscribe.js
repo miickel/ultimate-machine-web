@@ -1,5 +1,5 @@
 const jwt = require('./lib/jwt.js')
-const {client, listUnsubscribe} = require('./lib/db.js')
+const {listUnsubscribe} = require('./lib/emailList.js')
 
 const {NEWSLETTER_UNSUBSCRIBE_URL} = process.env
 
@@ -7,8 +7,6 @@ exports.handler = async (event, context) => {
   const {secret} = event.queryStringParameters
 
   try {
-    await client.connect()
-
     const {subscriberId, listId} = await jwt.verify(secret)
     const isUnsubscribed = await listUnsubscribe(subscriberId, listId)
 
@@ -32,7 +30,5 @@ exports.handler = async (event, context) => {
       body:
         'Could not unsubscribe. Please try again and contact support if the problem persists.',
     }
-  } finally {
-    await client.end().catch(() => {})
   }
 }

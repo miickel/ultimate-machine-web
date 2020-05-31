@@ -1,6 +1,6 @@
 const {validate} = require('email-validator')
 const {signConfirm, signUnsubscribe} = require('./lib/jwt.js')
-const {client, listSubscribe} = require('./lib/db.js')
+const {listSubscribe} = require('./lib/emailList.js')
 const {sendTemplatedEmail} = require('./lib/ses.js')
 
 const {NETLIFY_FUNCTIONS_ROOT, NEWSLETTER_LIST_ID} = process.env
@@ -12,8 +12,6 @@ exports.handler = async (event, context) => {
 
   try {
     if (!validate(email) || !name) throw 'invalid'
-
-    await client.connect()
 
     const subscriber = await listSubscribe({
       email,
@@ -48,7 +46,5 @@ exports.handler = async (event, context) => {
       statusCode: 400,
       body: 'fail',
     }
-  } finally {
-    await client.end().catch(() => {})
   }
 }

@@ -2,9 +2,9 @@ const fn = name => `/.netlify/functions/${name}`
 
 export const newsletterSubscribe = (email, name) =>
   plainFetch(
-    `${fn('newsletter-subscribe')}?email=${encodeURI(email)}&name=${encodeURI(
-      name
-    )}`
+    `${fn('newsletter-subscribe')}?email=${encodeURIComponent(
+      email
+    )}&name=${encodeURIComponent(name)}`
   )
 
 async function plainFetch(url, options = {}, method = 'get') {

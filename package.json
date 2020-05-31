@@ -2,7 +2,7 @@
   "name": "ultimate-machine-landing",
   "private": true,
   "description": "Ultimate Machine web site.",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "author": "Mickel Andersson <mickel@ultimatemachine.se>",
   "dependencies": {
     "aws-sdk": "^2.623.0",

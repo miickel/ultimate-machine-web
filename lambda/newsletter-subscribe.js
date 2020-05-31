@@ -8,7 +8,9 @@ const {NETLIFY_FUNCTIONS_ROOT, NEWSLETTER_LIST_ID} = process.env
 const listId = parseInt(NEWSLETTER_LIST_ID, 10)
 
 exports.handler = async (event, context) => {
-  const {email, name} = event.body
+  console.log(event.body)
+  const {email, name} = JSON.parse(event.body)
+  console.log(email)
 
   try {
     if (!validateEmail(email) || !name) throw 'invalid'

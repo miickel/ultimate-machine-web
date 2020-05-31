@@ -1,7 +1,10 @@
-const got = require('got')
 const {validate} = require('email-validator')
+const {signConfirm, signUnsubscribe} = require('./lib/jwt.js')
+const {client, listSubscribe} = require('./lib/db.js')
 
-const {LISTMONK_API_ROOT} = process.env
+const {NETLIFY_FUNCTIONS_ROOT, NEWSLETTER_LIST_ID} = process.env
+
+const listId = parseInt(NEWSLETTER_LIST_ID, 10)
 
 exports.handler = async (event, context) => {
   const {email, name} = event.queryStringParameters
@@ -9,12 +12,28 @@ exports.handler = async (event, context) => {
   try {
     if (!validate(email) || !name) throw 'invalid'
 
-    const {body} = await got.post(`${LISTMONK_API_ROOT}/subscribers`, {
-      json: {
-        email,
+    await client.connect()
+
+    const subscriber = await listSubscribe({
+      email,
+      name,
+      listId,
+    })
+
+    const secretConfirm = signConfirm(subscriber.id, listId)
+    const secretUnsubscribe = signUnsubscribe(subscriber.id, listId)
+
+    await sendTemplatedEmail({
+      email,
+      template: 'verify-email',
+      templateData: {
         name,
-        status: 'enabled',
-        lists: [3],
+        verifyUrl: `${NETLIFY_FUNCTIONS_ROOT}/newsletter-confirm?secret=${encodeURI(
+          secretConfirm
+        )}`,
+        unsubscribeUrl: `${NETLIFY_FUNCTIONS_ROOT}/newsletter-unsubscribe?secret=${encodeURI(
+          secretUnsubscribe
+        )}`,
       },
     })
 
@@ -28,5 +47,7 @@ exports.handler = async (event, context) => {
       statusCode: 400,
       body: 'fail',
     }
+  } finally {
+    await client.end().catch(() => {})
   }
 }

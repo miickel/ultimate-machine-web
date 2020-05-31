@@ -1,24 +1,23 @@
-const {getSheet} = require('./lib/sheets.js')
+const jwt = require('./lib/jwt.js')
+const {client, listUnsubscribe} = require('./lib/db.js')
 
 const {NEWSLETTER_UNSUBSCRIBE_URL} = process.env
 
 exports.handler = async (event, context) => {
-  const {email} = event.queryStringParameters
+  const {secret} = event.queryStringParameters
 
   try {
-    const sheet = await getSheet()
-    const rows = await sheet.getRows()
-    const row = rows.find(row => row.email === email && !row.unsubscribedAt)
+    await client.connect()
 
-    if (!row) {
+    const {subscriberId, listId} = await jwt.verify(secret)
+    const isUnsubscribed = await listUnsubscribe(subscriberId, listId)
+
+    if (!isUnsubscribed) {
       return {
         statusCode: 200,
         body: 'You are already unsubscribed.',
       }
     }
-
-    row.unsubscribedAt = new Date().getTime()
-    await row.save()
 
     return {
       statusCode: 303,
@@ -33,5 +32,7 @@ exports.handler = async (event, context) => {
       body:
         'Could not unsubscribe. Please try again and contact support if the problem persists.',
     }
+  } finally {
+    await client.end().catch(() => {})
   }
 }

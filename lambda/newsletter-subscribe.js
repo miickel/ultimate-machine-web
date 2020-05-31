@@ -1,6 +1,7 @@
 const {validate} = require('email-validator')
 const {signConfirm, signUnsubscribe} = require('./lib/jwt.js')
 const {client, listSubscribe} = require('./lib/db.js')
+const {sendTemplatedEmail} = require('./lib/ses.js')
 
 const {NETLIFY_FUNCTIONS_ROOT, NEWSLETTER_LIST_ID} = process.env
 

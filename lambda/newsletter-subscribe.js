@@ -40,13 +40,17 @@ exports.handler = async (event, context) => {
 
     return {
       statusCode: 200,
-      body: 'ok',
+      body: {
+        success: true,
+      },
     }
   } catch (err) {
     console.error(err)
     return {
       statusCode: 400,
-      body: 'fail',
+      body: {
+        success: false,
+      },
     }
   }
 }

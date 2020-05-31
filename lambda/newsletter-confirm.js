@@ -9,7 +9,7 @@ exports.handler = async (event, context) => {
 
   try {
     const {subscriberId, listId} = await jwt.verify(secret)
-    const isConfirmed = listConfirmSubscription(subscriberId, listId)
+    const isConfirmed = await listConfirmSubscription(subscriberId, listId)
     if (!isConfirmed) throw 'invalid'
   } catch (err) {
     Location = NEWSLETTER_EXPIRED_URL

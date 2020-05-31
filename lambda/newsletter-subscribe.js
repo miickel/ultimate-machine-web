@@ -8,7 +8,7 @@ const {NETLIFY_FUNCTIONS_ROOT, NEWSLETTER_LIST_ID} = process.env
 const listId = parseInt(NEWSLETTER_LIST_ID, 10)
 
 exports.handler = async (event, context) => {
-  const {email, name} = event.queryStringParameters
+  const {email, name} = event.body
 
   try {
     if (!validateEmail(email) || !name) throw 'invalid'

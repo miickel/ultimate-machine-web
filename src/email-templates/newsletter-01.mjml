@@ -9,7 +9,7 @@
     <mj-section background-color="#ffffff">
       <mj-column>
         <mj-text mj-class="text">
-          <p>Hi there,</p>
+          <p>Hi {{ .Subscriber.FirstName }},</p>
           <p>
             I hope you are doing well and keeping safe.
           </p>
@@ -17,14 +17,15 @@
             A while back you signed up for the
             <a href="https://ultimatemachine.se/newsletter"
               >Ultimate Machine Newsletter</a
-            >, previously <a href="https://tayl.app">TAYL Newsletter</a>. This
-            is the first edition. Feel free to unsubscribe if you're no longer
+            >
+            (previously <a href="https://tayl.app">TAYL Newsletter</a>). This is
+            the first edition. Feel free to unsubscribe if you're no longer
             interested in receiving these emails (1 per month).
           </p>
           <p>
-            The format of these emails is still a work in progress. Please
-            <strong>share your feedback</strong> with me by
-            <strong>replying to this email</strong>.
+            The format is still a work in progress. Please
+            <strong>share your feedback</strong> with me by replying to this
+            email. We'll work things out along the way!
           </p>
 
           <h3>One clever idea 💡</h3>
@@ -93,19 +94,12 @@
               <a href="https://ctt.ac/ffdAw">sharing it on Twitter</a>.
             </li>
             <li>
-              <strong>TAYL:</strong> Save 30% with the new code
-              <code>UM_BLOG</code>.
-            </li>
-            <li>
-              <strong>Running:</strong> I've still managed to run every day
-              since January 1st and recently passed the 100-mark and closing in
-              on 600km (~373 miles). There'll be a blog post about this goal in
-              the future.
+              <strong>TAYL:</strong> Save 30% with coupon <code>UM_BLOG</code>.
             </li>
             <li>
               <strong>New project:</strong> Graphical profile, design of landing
               page, onboarding and authentication flow is done. The next step is
-              building the admin panel and backend.
+              building the admin panel and backend. Hope to launch it soon!
             </li>
             <li>
               <strong>Misc:</strong> I somehow managed to win (!!!) Google's
@@ -117,6 +111,12 @@
                 >How I Created a Particle Clock and Won the #FlutterClock
                 Challenge</a
               >.
+            </li>
+            <li>
+              <strong>Running:</strong> I've still managed to run every day
+              since January 1st and recently passed the 100-mark and closing in
+              on 600km (~373 miles). There'll be a blog post about this goal in
+              the future.
             </li>
           </ul>
 

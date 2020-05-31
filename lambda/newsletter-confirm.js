@@ -1,5 +1,5 @@
 const jwt = require('./lib/jwt.js')
-const {getSheet} = require('./lib/sheets.js')
+const {client, listConfirmSubscription} = require('./lib/db.js')
 
 const {NEWSLETTER_WELCOME_URL, NEWSLETTER_EXPIRED_URL} = process.env
 
@@ -8,16 +8,13 @@ exports.handler = async (event, context) => {
   let Location = NEWSLETTER_WELCOME_URL
 
   try {
-    const {email} = await jwt.verify(secret)
-    const sheet = await getSheet()
-    const rows = await sheet.getRows()
-    const row = rows.find(row => row.email === email)
-    if (!row) throw 'invalid'
-    row.secret = ''
-    row.confirmedAt = new Date().getTime()
-    await row.save()
+    const {subscriberId, listId} = await jwt.verify(secret)
+    const isConfirmed = listConfirmSubscription(subscriberId, listId)
+    if (!isConfirmed) throw 'invalid'
   } catch (err) {
     Location = NEWSLETTER_EXPIRED_URL
+  } finally {
+    await client.end().catch(() => {})
   }
 
   return {

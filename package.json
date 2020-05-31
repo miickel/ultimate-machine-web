@@ -2,7 +2,7 @@
   "name": "ultimate-machine-landing",
   "private": true,
   "description": "Ultimate Machine web site.",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "author": "Mickel Andersson <mickel@ultimatemachine.se>",
   "dependencies": {
     "aws-sdk": "^2.623.0",
@@ -50,6 +50,7 @@
     "netlify-cms-app": "^2.11.13",
     "netlify-cms-media-library-cloudinary": "^1.3.4",
     "node-sass": "^4.13.1",
+    "pg": "^8.2.1",
     "prism-themes": "^1.3.0",
     "prismjs": "^1.19.0",
     "prop-types": "^15.7.2",

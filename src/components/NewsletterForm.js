@@ -40,7 +40,7 @@ const NewsletterForm = () => {
           <br />
           Click the link in the email sent to you to{' '}
           <strong>confirm your subscription</strong>.<br />
-          The link expires in 2 days from now.
+          The link expires in 14 days from now.
         </p>
         <p>
           <strong>Fun fact:</strong> Roughly 47% who submitted their email did

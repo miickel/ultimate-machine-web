@@ -130,7 +130,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography.js`,
       },
     },
-    `gatsby-plugin-sass`,
+    { resolve: `gatsby-plugin-sass`, options: { indentedSyntax: true } },
     {
       resolve: 'gatsby-transformer-remark',
       options: {

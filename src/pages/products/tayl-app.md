@@ -16,6 +16,7 @@ tags:
   - Android
   - Chrome
   - Firefox
+  - Podcasting
 ---
 
 TAYL is a service that turns text content into audio. Instead of consuming text in front of the screen, you can consume audio while outside living your life free of eye-strain.

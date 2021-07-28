@@ -32,7 +32,7 @@ function postJson(url, options) {
 }
 
 async function jsonFetch(url, options = {}, method = 'post') {
-  const {data, idToken, apiToken, ...props} = options
+  const {data, apiToken, ...props} = options
 
   const req = {
     method,
@@ -43,11 +43,6 @@ async function jsonFetch(url, options = {}, method = 'post') {
     ...req.headers,
     Accept: 'application/json',
     'Content-Type': 'application/json',
-  }
-
-  if (idToken) {
-    const freshIdToken = await auth().currentUser.getIdToken()
-    req.headers['x-id-token'] = freshIdToken
   }
 
   if (apiToken) {

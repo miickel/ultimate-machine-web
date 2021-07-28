@@ -2,10 +2,11 @@
   "name": "ultimate-machine-landing",
   "private": true,
   "description": "Ultimate Machine web site.",
-  "version": "0.11.7",
+  "version": "0.12.0",
   "author": "Mickel Andersson <mickel@ultimatemachine.se>",
   "dependencies": {
     "aws-sdk": "^2.623.0",
+    "caniuse-lite": "^1.0.30001248",
     "classnames": "^2.2.6",
     "eslint-plugin-graphql": "^3.1.1",
     "fs-extra": "^8.1.0",

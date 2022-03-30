@@ -15,11 +15,9 @@
   <mj-column>
     <mj-text mj-class="text small" align="right">
       Ultimate Machine
-      <br />Gunn Wållgrens Gata 5 <br />412 49 Gothenburg, Sweden <br /><br /><a
-        class="link--footer"
-        href="{{ UnsubscribeURL }}"
-        >Unsubscribe</a
-      >
+      <br />Gunn Wållgrens Gata 5 <br />412 49 Gothenburg, Sweden<br />
+      {{ TrackView }}
+      <br /><a class="link--footer" href="{{ UnsubscribeURL }}">Unsubscribe</a>
     </mj-text>
   </mj-column>
 </mj-section>

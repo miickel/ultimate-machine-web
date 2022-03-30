@@ -1,0 +1,165 @@
+<mjml>
+  <mj-head>
+    <mj-include path="./master/variables.mjml" />
+  </mj-head>
+
+  <mj-body background-color="#ffffff">
+    <mj-include path="./master/header.mjml" />
+
+    <mj-section background-color="#ffffff">
+      <mj-column>
+        <mj-text mj-class="text">
+          <p>Hi {{ .Subscriber.FirstName }},</p>
+          <p>
+            I hope you are doing well and keeping safe.
+          </p>
+          <p>
+            A while back you signed up for the
+            <a href="https://ultimatemachine.se/newsletter"
+              >Ultimate Machine Newsletter</a
+            >
+            (previously <a href="https://tayl.app">TAYL Newsletter</a>). This is
+            the second edition. Feel free to unsubscribe if you're no longer
+            interested in receiving these emails.
+          </p>
+
+          <h3>One thoughtful quote 🤔</h3>
+          <blockquote>
+            “Be regular and orderly in your life, so that you may be violent and
+            original in your work.” - Gustave Flaubert
+          </blockquote>
+          <p>
+            Do you like this? —
+            <a href="https://ctt.ac/6W0bU">Share it with one click</a>
+          </p>
+          <h3>Searching for co-founders 🔎</h3>
+          <p>
+            I've realised the benefits of working on things together after
+            hacking away on my own projects alone for the past 2 years. That's
+            why I've now started to ask around for people interested in joining
+            me on my next venture. Or perhaps joining me on my latest launch
+            (see below).
+          </p>
+
+          <p>
+            My skills are around product development, coding, design etc. So if
+            you're someone that would compliment my skills by being, say... a
+            marketing wizard, for example, that would be awesome. But I'm not
+            picky, just get in touch if you'd like to build something cool, fun
+            or useful together! 👋
+          </p>
+
+          <p>Reply to this email and I'll tell you more.</p>
+
+          <h3>One clever idea 💡</h3>
+          <blockquote>
+            The heat from the sauna relaxes the body's muscles, improves
+            circulation and stimulates the release of endorphins. Endorphins are
+            the body’s all-natural "feel good" chemical, and their release
+            provides a truly wonderful "after sauna glow.”
+          </blockquote>
+          <p>
+            Do you like this? —
+            <a href="https://ctt.ac/hN8w7">Share it with one click</a>
+          </p>
+
+          <h3>Updates from me 🚀</h3>
+          <p>
+            For the past few months I've been building
+            <a href="https://www.podopi.com">Podopi</a>. Perhaps you remember
+            <a href="https://www.tayl.app">TAYL</a>? Podopi is similar, but
+            aimed towards content creators, such as writers, bloggers and
+            medium- to small businesses. Everyone who would like to offer their
+            users an <em>exciting</em> alternative to boring, plain old
+            long-form text.
+          </p>
+          <p>
+            Podopi works on most blog-like websites and require no coding or
+            complex installs. Simply sign up with your website address and the
+            app will create a podcast that forever stays in sync with your most
+            recent posts. Your fresh blog post automatically gets converted into
+            a podcast episode.
+          </p>
+          <p>
+            Find the perfect sound track for your podcast with a library of
+            15,000 fully licensed music tracks to choose from. Podopi lets you
+            select from 200+ different voices and dialects to best represent
+            your brand, and give your content a voice. Podopi generates audio
+            and video content that will impress your users.
+          </p>
+
+          <h3>Podopi on Product Hunt 👻</h3>
+          <p>
+            Today
+            <a href="https://www.producthunt.com/posts/podopi"
+              >Podopi got featured on Product Hunt</a
+            >, a place where you can discover the latest mobile apps, websites,
+            and technology products that everyone's talking about.
+          </p>
+          <a href="https://www.producthunt.com/posts/podopi">
+            <img
+              width="100%"
+              src="https://ik.imagekit.io/podopi/static/newsletters/ultimatemachine/revue-producthunt-launch.png"
+              alt="Podopi on Product Hunt"
+            />
+          </a>
+          <p>
+            Click the cute kitty to learn more about Podopi and join the
+            conversation on Product Hunt. There's a bonus discount for everyone!
+          </p>
+
+          <h3>Since we last spoke...</h3>
+          <ul>
+            <li>
+              <strong>Shipping:</strong> I'm happy to finally announce that
+              <a href="https://www.producthunt.com/posts/podopi/launch-day"
+                >Podopi is live</a
+              >.
+            </li>
+            <li>
+              <strong>Connecting:</strong> I'll be honest. Only this week my
+              focus has started to shift from building to networking, marketing
+              and such. It's not my strong side, so things can only improve from
+              here 😆
+            </li>
+            <li>
+              <strong>Learning:</strong> Podopi was built in Elixir, a
+              functional programming language I've never used before. Elixir is
+              widely different from JavaScript/NodeJS and the tools I'm used to.
+              It made the learning curve quite steep, but somewhere halfway down
+              the path it all started to "click" for me. Elixir is a beautiful
+              language that comes with many benefits from running on the BEAM
+              (Erlang virtual machine). Phoenix/Elixir comes packed with many
+              great features that makes it possible to ship products and
+              features quickly, with confidence.
+            </li>
+            <li>
+              <strong>Maintaining:</strong>
+              <a href="https://www.tayl.app">TAYL</a> has been receiving a few
+              updates along the way as well. Bug fixes and small tweaks, of
+              course. But also plenty of new voices and dialects. There's a new
+              feature that allows you to
+              <a
+                href="https://headwayapp.co/tayl-changelog/listen-to-the-body-of-emails-200566"
+                >listen to your emails as a podcast</a
+              >
+              by forwarding them to your TAYL inbox. There's a new Changelog in
+              the member portal that informs members of updates like these.
+            </li>
+            <li>
+              <strong>Running:</strong> Surprisingly, I'm still running. Every
+              day since January 1st, 2020. Today is day number 613. This year
+              I'm focusing on trail running and slowly increasing daily mileage.
+              My feet now average about 5k (3.1 miles) for the whole year and
+              currently about 50-70km (31-112 miles) per week.
+            </li>
+          </ul>
+        </mj-text>
+
+        <mj-include path="./master/signature.mjml" />
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./master/footer.mjml" />
+  </mj-body>
+</mjml>

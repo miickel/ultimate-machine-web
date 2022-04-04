@@ -58,11 +58,7 @@ const NewsletterForm = () => {
   return (
     <>
       <p>
-        Get my <strong>best content</strong> by email. Emails are sent out{' '}
-        <strong>once a month</strong> on average. Your email address is{' '}
-        <strong>safe</strong> and{' '}
-        <strong>will not be shared with 3rd parties</strong>. Reply to any
-        sendout to <strong>get in touch with me</strong>.
+        Get my best content by email. Emails are sent out no more than once a month. Your email address is safe and will not be shared with 3rd parties.
       </p>
       <form onSubmit={handleSubmit}>
         <fieldset disabled={state === states.submitting}>

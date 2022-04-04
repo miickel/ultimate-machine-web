@@ -179,6 +179,8 @@ Only a couple of customers have registered an account so far.
 We've only done a little marketing, so it's too early to say if it's a hit or miss.
 Either way, I'm happy with the result.
 
+[![Podopi](/img/podopi/podopi-landing.png)](https://www.podopi.com)
+
 Visit [podopi.com](https://www.podopi.com) to check it out.
 The landing page was built with Next.js and TailwindCSS.
 Sign up for a free trail if you have a website and would like to provide your readers with audio.

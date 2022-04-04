@@ -2,7 +2,7 @@
   "name": "ultimate-machine-landing",
   "private": true,
   "description": "Ultimate Machine web site.",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "author": "Mickel Andersson <mickel@ultimatemachine.se>",
   "dependencies": {
     "aws-sdk": "^2.623.0",
@@ -58,7 +58,6 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
-    "react-obfuscate": "^3.6.6",
     "react-typography": "^0.16.19",
     "typeface-merriweather": "^0.0.72",
     "typeface-source-code-pro": "^1.1.3",

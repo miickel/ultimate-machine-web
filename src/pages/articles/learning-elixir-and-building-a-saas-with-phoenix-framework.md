@@ -125,7 +125,7 @@ For the best experience, I recommend looking into how to integrate the test envi
 In my case, [vim-test](https://github.com/vim-test/vim-test) did the trick!
 
 If you do TDD properly, you should be able to build an entire working web application without ever having to launch a web browser.
-This project was built with [Phoenix Framework](phoenixframework.org), which has great support for testing.
+This project was built with [Phoenix Framework](https://phoenixframework.org), which has great support for testing.
 
 In the example below, you can see how we're able to do assertions based on HTML-like selectors.
 This should look familiar to you if you've ever done testing in a modern UI library before, like Vue or React.

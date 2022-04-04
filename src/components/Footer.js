@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import Obfuscate from 'react-obfuscate'
 import Container from './Container.js'
 import LogoIcon from './LogoIcon.js'
 import styles from './Footer.module.sass'
@@ -30,15 +29,13 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <Obfuscate
-              obfuscateChildren={false}
-              email="mickel@ultimatemachine.se"
-              headers={{
-                body: '\n\n\nSent via ultimatemachine.se',
-              }}
+            <a
+              href={`https://aemail.com/pggy`}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
             >
               Send an <strong>E-mail</strong>
-            </Obfuscate>
+            </a>
           </li>
         </ul>
         <Link to="/" title="Ultimate Machine">

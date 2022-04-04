@@ -1,14 +1,13 @@
 ---
 template: BlogPost
 title: '365 Days of Running Every Day'
-description: Running has been a big part of my life since early adulthood. Recently I reached my goal of running each and every day for a whole year.
+description: Running has been a big part of my life since early adulthood. This post is a look back at my one year long challenge of running each and every day.
 date: 2021-01-01T11:12:31.888Z
 isFeatured: false
 featuredImage: /img/running-2020/chart01.png
-slug: running
 colors:
   - '#236CB0'
-  - '#FFFFFF'
+  - '#FCF6E5'
 tags:
   - Running
   - Runstreak
@@ -23,13 +22,12 @@ Sure, there are a few inbetweeners.
 But those who manage to make a habit out of running tend to end up in the love camp, while those who fall off early struggle to get back and eventually end up hating it.
 Which secrets do you have to unlock in order to end up in the prior?
 
-
 ## Background
 
 As a young boy and though my teens I played a team sport called Floorball.
 It was the biggest indoor sport in Sweden at the time.
 Similarly to hockey, you have a club, but it's made of plastic.
-Instead of a hockey puck, players chase a hollow plastic ball with holes in  it.
+Instead of a hockey puck, players chase a hollow plastic ball with holes in it.
 And instead of ice, you simply run around on the floor.
 As a player you run around a lot, but mostly in short bursts.
 You play for a couple of minutes until you get tired, then sit on the bench while one of your team mates take over.

@@ -15,7 +15,7 @@ export const BlogRollTemplate = ({posts = [], limit}) => {
       {posts.slice(0, limit).map(({node: post}) => (
         <li key={post.id}>
           <ArticleCard
-            slug={post.fields.slug}
+            slug={post.fields ? post.fields.slug : ''}
             title={post.frontmatter.title}
             featuredImage={post.frontmatter.featuredImage}
             date={post.frontmatter.date}

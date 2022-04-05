@@ -22,20 +22,21 @@ It's been a year since the article about [my year-long running challenge](/artic
 Skim through that post first if you want some background info.
 
 Every day since the 31st of December 2019 has been a running day for me.
-No matter daily form, geographic location, mental state, or whether I've tied my running shoes and gone outside for a run.
+I've tied my running shoes and gone outside for a run one day after another.
+No matter daily form, geographic location, mental state or the weather.
 It's been 730 days filled with euphoria, pain, joy, boredom, and everything in between.
 
 My Garmin Watch has been collecting data since day one.
 In these posts, I use Python to explore it.
-It is also nice to see some progress and reflect upon actually going somewhere, even if most of my runs end up exactly where I started.
+It's primarily to evaluate progress and reflect upon actually going somewhere, even if most of my runs end up exactly where I started.
 
 ## 2020 vs 2021
 
 In 2020 I ran mostly on asphalt and flat terrain.
 While this is convenient when living in the city, it's not optimal for the body.
 The hard surface makes each impact unnecessarily strenuous on the body.
-Running near roads with plenty of traffic is also not very good for the lungs long term.
-In my experience, city environments are also quite monotonous, which doesn't really add to the experience.
+Running near roads with plenty of traffic is also detrimental for the lungs long term.
+In my experience, city environments are also quite monotonous and dull, which doesn't really add to the experience.
 
 By the end of 2020, most of my runs were trial runs out in nature.
 The natural variation of the terrain forces a more distributed load on the body.
@@ -49,6 +50,7 @@ The goal for 2021, in addition to running every day, was to reach a daily averag
 In addition to my GPS data, I've also added a heart rate monitor in 2021.
 It records heart rate with more accuracy than the watch's built-in sensor.
 And it has the added benefit of recording running dynamics data, such as ground contact time balance, vertical movement, and power.
+More data to explore!
 
 It was fun to have some photos from my running experiences when [looking back at 2020](/articles/365-days-of-running-every-day/).
 So in 2021, I've been a bit more diligent in bringing the phone with me to snap photos and videos.
@@ -89,6 +91,7 @@ But because I also trade the stock market, which inconveniently opens at 9, I te
 
 The longest run during 2020 was 22.47 km.
 In 2021 the longest logged run was 33.65 km -- a run that actually was closer to 50 km, but my watch died mid-run.
+I also manged to get lost in the woods, in total darkness.
 
 The plot illustrates that 2021 has been more varied both in terms of distance and elevation.
 
@@ -96,6 +99,7 @@ The plot illustrates that 2021 has been more varied both in terms of distance an
 
 Plotting pace together with stride length is quite interesting.
 The pace is inverted, so lower is faster. Almost all my runs have been slow.
+My stride length has intentionally been kept low, in order to reduce strain.
 
 These calendar heat maps plot the running duration in minutes over two years.
 It sure is satisfying to know that none of those days are blank!
@@ -117,25 +121,27 @@ My motivation to continue doing this is honestly quite low at the moment.
 I have since the start of this challenge learned so much about running.
 
 If my goal was to get faster or be able to run for longer, running every day would probably not be the best way.
-Running every day makes it difficult to maintain a training program in the "traditional sense".
+Running every day makes it difficult to maintain a training program in the "traditional" sense.
 Hard runs are not as hard, because you must still be able to run the next day.
 Same with long runs.
 Your body never gets enough recovery to get stronger for the next session.
 Instead, you get a bag of mostly slow to medium runs, or "junk miles".
 You never push yourself hard enough, and you never let your body fully recover, so you never improve.
+A good training plan includes a good balance of quality sessions and recovery.
 
 That being said, there are still a lot of benefits of running every day.
 It's been more than 5 years since my last cold.
-Since my daily runs, I've never had even a runny nose.
+Since starting with my daily runs, I've never had even a runny nose.
 Even though I've stopped meditating, I feel more present than ever and my mind is calmer.
 Running is a better way to meditate than actually meditating, in my opinion.
 I would go as far as to say that meditation is for people that are too lazy to run or perform any other physical activity that requires focus.
+Try juggling, and you'll see what I mean.
 
 So will I continue running every day?
 Now that 1,000 is within reach, I feel obligated to continue.
 Call it sunk cost effect, if you'd like.
-My eyes have opened up a bit and I've discovered a deep joy in running far.
-Like really, painfully far, all the salt in your body leaving-far.
+I've discovered a deep joy in running far.
+Like really, painfully far, all the salt in your body leaving the atmosphere-far.
 Although not formally set, I have a goal in the back of my head to run a 100-mile Ultra Marathon.
 That's 160 km.
 My longest run so far is only 50 km.

@@ -15,6 +15,7 @@ tags:
   - Habits
   - Challenges
   - Goal Setting
+  - Python
 ---
 
 People tend to either love running or hate it.

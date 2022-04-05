@@ -19,7 +19,7 @@ Podopi is a service that helps you get more value out of your blog by creating a
 Just set and forget.
 It only takes 10 minutes to setup, but will yield business value continously.
 
-[![Podopi - Make Your Blog Posts Speak for Themselves.](/img/podopi/podopi-share.png)](https://www.podopi.com)
+[![Podopi](/img/podopi/podopi-landing.png)](https://www.podopi.com)
 
 It's been 2 years since the launch of [TAYL](/products/tayl-app).
 Thousands of users worldwide have since been listening to a wide variety of text content read by computer-generated speech.
@@ -44,7 +44,6 @@ The popularity of podcasts is evident by looking at some public statistics.
 
 Learn [why you should start a Podcast](https://www.podopi.com/docs/why-start-a-podcast) on podopi.com.
 
-
 ## Creating Podcasts from Blogs
 
 Behind the scenes, Podopi is using A.I. and machine learning to transform written text into brilliantly crafted podcasts and videos.
@@ -58,4 +57,3 @@ With customizable settings, you can even preview each finished product before th
 Complete with music, cover art, and more, you can expect a primed and polished product, every time.
 
 In turn, businesses can tap into a unique advantage that generates more value for a blog post than ever before.
-

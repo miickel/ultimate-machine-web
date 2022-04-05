@@ -1,21 +1,22 @@
 ---
 template: BlogPost
 title: '730 Days of Running Every Day'
-description: TBD
+description: I have been running with a GPS watch and heart rate monitor every day for the past 2 years. In this post we'll use Python to explore the data!
 date: 2022-01-11T21:32:21.888Z
 isFeatured: false
-featuredImage: /img/running-2020/chart01.png
+featuredImage: '/img/running-2021/runphoto - 15.jpeg'
 colors:
-  - '#236CB0'
-  - '#FCF6E5'
+  - '#1E1E1E'
+  - '#F5DFA5'
 tags:
   - Running
   - Runstreak
+  - Ultra Running
   - Health
   - Habits
   - Challenges
   - Goal Setting
-  - Ultra Running
+  - Python
 ---
 
 It's been a year since the article about [my year-long running challenge](/articles/365-days-of-running-every-day/) was posted.

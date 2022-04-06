@@ -6,8 +6,8 @@ date: 2020-08-21T21:32:21.888Z
 isFeatured: false
 featuredImage: '/img/sugar/sugar-berry.jpg'
 colors:
-  - '#162769'
-  - '#F7D3A3'
+  - '#FFE4C1'
+  - '#CB3F3B'
 tags:
   - Health
   - Fasting

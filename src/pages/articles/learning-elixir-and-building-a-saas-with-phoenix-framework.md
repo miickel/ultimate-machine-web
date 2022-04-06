@@ -185,6 +185,13 @@ Visit [podopi.com](https://www.podopi.com) to check it out.
 The landing page was built with Next.js and TailwindCSS.
 Sign up for a free trail if you have a website and would like to provide your readers with audio.
 
+`youtube: https://youtu.be/yYbBVCo0BVw`
+
+This video was created using a couple of screen recordings and code.
+I didn't have any good video editing software, so why not use code?
+The voice over was created by using some of the AI voices available in Podopi.
+It worked surprisingly well!
+
 ## Conclusion
 
 Creating the project took me about 3 months, while also working on other things and trading the stock market to earn a living.

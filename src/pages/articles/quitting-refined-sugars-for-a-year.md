@@ -1,6 +1,6 @@
 ---
 template: BlogPost
-title: 'Quitting Refined Sugars for a Year - a Mental Challenge'
+title: 'Quitting Refined Sugars for a Year'
 description: Would you be willing to give up refined sugars for a whole year only for the mental challenge? I did just that in 2019. Here's how it panned out!
 date: 2020-08-21T21:32:21.888Z
 isFeatured: false

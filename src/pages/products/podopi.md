@@ -25,8 +25,6 @@ It's been 2 years since the launch of [TAYL](/products/tayl-app).
 Thousands of users worldwide have since been listening to a wide variety of text content read by computer-generated speech.
 The next step for TAYL is a sister product aimed at business users, namely Podopi.
 
-`youtube: https://youtu.be/yYbBVCo0BVw`
-
 ## Why Start a Podcast?
 
 Blogs are fine and all, but when was the last time you heard "I read this great blog post that you have to see."? -- 1997? 2000?
@@ -53,7 +51,7 @@ Behind the scenes, Podopi is using A.I. and machine learning to transform writte
 Once Podopi is synchronized to your website, it will automatically take your blog posts and publish an extraordinary finished product onto Apple Podcasts, Spotify, YouTube, and more.
 Every step of the way, you’ll increase your exposure and reach new audiences.
 
-[![Podopi - Make Your Blog Posts Speak for Themselves.](/img/podopi/podopi-chart.png)](https://www.podopi.com)
+`youtube: https://youtu.be/yYbBVCo0BVw`
 
 With customizable settings, you can even preview each finished product before they are posted, leading to even better quality control.
 Complete with music, cover art, and more, you can expect a primed and polished product, every time.

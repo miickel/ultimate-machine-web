@@ -7,7 +7,7 @@ isFeatured: false
 featuredImage: '/img/sugar/sugar-berry.jpg'
 colors:
   - '#FFE4C1'
-  - '#CB3F3B'
+  - '#A62320'
 tags:
   - Health
   - Fasting

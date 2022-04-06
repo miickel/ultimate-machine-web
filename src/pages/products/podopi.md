@@ -25,6 +25,8 @@ It's been 2 years since the launch of [TAYL](/products/tayl-app).
 Thousands of users worldwide have since been listening to a wide variety of text content read by computer-generated speech.
 The next step for TAYL is a sister product aimed at business users, namely Podopi.
 
+`youtube: https://youtu.be/yYbBVCo0BVw`
+
 ## Why Start a Podcast?
 
 Blogs are fine and all, but when was the last time you heard "I read this great blog post that you have to see."? -- 1997? 2000?
